@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YUcGqrIXofVN7JnwyTME3DIvbvj3os9x8Q7G8dCJbzM=' 'sha256-9NSVzepWqTvXCcX/MsOX47+U1Sa/aBmqyyCJElnhOc8='; style-src 'unsafe-inline'; font-src 'none'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><meta name="description" content="Free square-foot garden planner. Map beds, get planting dates for your zone, track crops and varieties, and log harvests. Your data stays in your browser.">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YUcGqrIXofVN7JnwyTME3DIvbvj3os9x8Q7G8dCJbzM=' 'sha256-YTQL7JAmz4kC3mf8FlxrLHZbHEANoXT2RDeELk9T7P0='; style-src 'unsafe-inline'; font-src 'none'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><meta name="description" content="Free square-foot garden planner. Map beds, get planting dates for your zone, track crops and varieties, and log harvests. Your data stays in your browser.">
 <title>mbgarden.online</title>
 <script>(function(){var t=null;try{t=localStorage.getItem('mbgarden:theme');}catch(e){}document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2032%2032%22%3E%3Crect%20width=%2232%22%20height=%2232%22%20rx=%226%22%20fill=%22%23b8532f%22/%3E%3Cg%20fill=%22%23fff%22%3E%3Cpath%20d=%22M9%2017.5h14l-1.9%208.1a1.3%201.3%200%200%201-1.3%201H12.2a1.3%201.3%200%200%201-1.3-1z%22/%3E%3Crect%20x=%228%22%20y=%2215.2%22%20width=%2216%22%20height=%223.3%22%20rx=%22.9%22/%3E%3Cpath%20d=%22M15.2%2015.2V11h1.6v4.2z%22/%3E%3Cpath%20d=%22M16%2012.4c-4.4%200-6.6-2.2-6.6-6.4%204.4%200%206.6%202.2%206.6%206.4z%22/%3E%3Cpath%20d=%22M16%2011c0-3.8%202-5.8%206-5.8%200%203.8-2%205.8-6%205.8z%22/%3E%3C/g%3E%3C/svg%3E">
@@ -123,7 +123,7 @@ main{min-height:0;overflow:hidden}
 
 .center{display:flex;flex-direction:column;min-height:0;min-width:0}
 .bar{display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid var(--line);background:var(--surface);flex-wrap:wrap}
-.mode{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 9px;border-radius:6px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.mode{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 9px;border-radius:6px;background:var(--accent-soft);color:var(--accent-hover);white-space:nowrap}
 .sizer{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:12.5px}
 .sizer input{width:54px;padding:4px 6px}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
@@ -199,6 +199,26 @@ main{min-height:0;overflow:hidden}
 .dates .k{color:var(--muted)}
 .dates .v{font-family:var(--f-mono);font-size:12.5px}
 .dates .v small{font-family:var(--f-body);color:var(--muted)}
+.life{margin:10px 0 4px;padding:0;list-style:none;counter-reset:st;display:flex;flex-direction:column;gap:10px}
+.life>li{position:relative;padding-left:28px}
+.life>li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-line);font-size:11px;font-weight:700;display:grid;place-items:center}
+.life h3{font-size:13px;margin:0 0 3px;font-weight:700}
+.life p{margin:3px 0;font-size:13px;line-height:1.45}
+.life p.mat{padding:6px 9px;border-radius:7px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.life .cite{font-size:11px;color:var(--muted);white-space:nowrap;margin-left:2px}
+.life a.cite{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line-strong)}
+.life.staged>li.now::before{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.life.staged>li.past::before{content:"✓";counter-increment:st}
+.life.staged>li.past{opacity:.72}
+.life.staged summary{font-size:13px;font-weight:700;cursor:pointer;list-style:none}
+.life.staged summary::-webkit-details-marker{display:none}
+.life.staged summary::after{content:"▸";margin-left:6px;color:var(--muted)}
+.life.staged details[open]>summary::after{content:"▾"}
+.life .st-lbl{font-size:10.5px;font-weight:600;padding:0 6px;border-radius:999px;margin-left:4px;vertical-align:1px;border:1px solid var(--line);color:var(--muted);background:var(--surface-2)}
+.life .st-now{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.life .st-next{background:var(--accent-soft);color:var(--accent-hover);border-color:var(--accent-line)}
+.life-intro{margin:10px 0 0}
+.tag.t-mat{background:var(--accent-soft);color:var(--accent-hover);border-color:var(--accent-line);font-weight:600}
 .notes{margin:8px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
 .notes li{font-size:13px;padding:7px 10px;border-radius:7px;background:color-mix(in srgb,var(--harv) 12%,transparent);border-left:3px solid var(--harv)}
 .notes li.ok{background:color-mix(in srgb,var(--grow) 12%,transparent);border-left-color:var(--grow)}
@@ -439,7 +459,8 @@ details.more>*:not(summary)+*{margin-top:10px}
 .stepper button{justify-content:flex-start;min-height:34px;border-radius:8px;padding:5px 10px;font-size:13px;position:relative}
 .stepper button.reached:not([aria-pressed="true"]){background:color-mix(in srgb,var(--grow) 10%,var(--surface));border-color:color-mix(in srgb,var(--grow) 35%,var(--line))}
 .qh{margin-top:14px;padding:12px;border-radius:10px;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);display:flex;flex-direction:column;gap:8px}
-.qh .eyebrow{margin:0;color:var(--accent)}
+.qh .eyebrow{margin:0;color:var(--accent-hover)}
+.qh .field-msg:not(.err):not(.warn){color:var(--ink-2)}
 .qh-row{display:flex;gap:8px;align-items:center;justify-content:space-between}
 .qh-row input{flex:1;min-width:0;font-size:15px;padding:8px 10px}
 .qh-row select{padding:8px}
@@ -578,7 +599,7 @@ nav.tabs button:hover:not([aria-current="page"]){background:color-mix(in srgb,va
 .legal p,.legal li{max-width:68ch;line-height:1.55}
 .legal ul{padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .legal code{font-family:var(--f-mono);font-size:12.5px;background:var(--surface-2);padding:1px 5px;border-radius:4px}
-.legal a,.legal-foot a,.foot-links a{color:var(--accent);text-underline-offset:2px}
+.legal a,.legal-foot a,.foot-links a{color:var(--accent-hover);text-underline-offset:2px}
 .updated{color:var(--muted);font-size:13px;margin:4px 0 0}
 .license{white-space:pre-wrap;font:12px/1.5 var(--f-mono);max-height:320px;overflow:auto;background:var(--surface-2);padding:12px;border-radius:8px}
 .legal-foot{display:flex;gap:16px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);margin-top:28px;padding-top:14px;font-size:13px;color:var(--muted)}
@@ -829,6 +850,10 @@ nav.tabs button[aria-current="page"] svg{opacity:1}
     linear-gradient(var(--post),var(--post)) right 3px center/max(3px,calc(var(--cs)*.08)) 74% no-repeat,
     linear-gradient(var(--twine),var(--twine)) 0 30%/100% 2px no-repeat,
     linear-gradient(var(--twine),var(--twine)) 0 70%/100% 2px no-repeat}
+.blk.fw.fwv::after{background:linear-gradient(var(--post),var(--post)) center top 3px/74% max(3px,calc(var(--cs)*.08)) no-repeat,
+    linear-gradient(var(--post),var(--post)) center bottom 3px/74% max(3px,calc(var(--cs)*.08)) no-repeat,
+    linear-gradient(var(--twine),var(--twine)) 30% 0/2px 100% no-repeat,
+    linear-gradient(var(--twine),var(--twine)) 70% 0/2px 100% no-repeat}
 .tool .sw.sw-weave{background:linear-gradient(var(--post),var(--post)) left 3px center/3px 80% no-repeat,linear-gradient(var(--post),var(--post)) right 3px center/3px 80% no-repeat,
   linear-gradient(var(--twine),var(--twine)) 0 32%/100% 1.5px no-repeat,linear-gradient(var(--twine),var(--twine)) 0 68%/100% 1.5px no-repeat,var(--soil)}
 .tool>span:not(.sw){text-align:center;line-height:1.15}
@@ -1092,6 +1117,237 @@ const METHOD_NAMES={sow:'Direct sow',tx:'Transplant',plant:'Plant (sets, slips, 
 const HEAT_STALL=new Set(['tomato','cherrytom','pepper','hotpepper','eggplant','bushbean','polebean']);
 const EMOJI_PAL='🍅 🍆 🥑 🥦 🥬 🥒 🌶️ 🫑 🌽 🥕 🫒 🧄 🧅 🥔 🍠 🫚 🥜 🫘 🫛 🌰 🍄 🍇 🍈 🍉 🍊 🍋 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🫐 🥝 🥥 🎃 🏮 🌿 🌱 🪴 ☘️ 🍀 🌾 🌻 🌼 🌸 🌺 🌷 🌹 🪻 💠 🔴 🟠 🟡 🟢 🟣 ⚪ 🟥 🟧 🟨 🟩 🟪'.split(' ');
 
+/* ---------- feeding schedule ----------
+   One plan for almost the whole garden: worm castings at planting, an
+   all-purpose balanced feed (e.g. 20-20-20) through leafy growth, and a
+   bloom/fruit formula (e.g. 10-30-20) once a crop flowers or fruits. Crops
+   are grouped by how they're grown, not given a one-off fertilizer each.
+   A handful genuinely need something else (an acid feed, a bulb feed, or
+   no feed at all) and are called out by id in FEED_NOTE instead of
+   inventing a new product for the whole group. */
+const FEED_FRUITING=new Set(['tomato','cherrytom','pepper','hotpepper','eggplant','okra','cucumber','zucchini','yellowsquash','wintersquash','pumpkin','bushbean','polebean','pea','fava','corn','peanut','groundcherry','cantaloupe','watermelon','strawberry']);
+const FEED_HEADING=new Set(['broccoli','cauliflower']);
+const FEED_LEAFY=new Set(['cabbage','brussels','kale','collards','mustard','bokchoy','celery','lettuce','romaine','arugula','chard','endive','radicchio','spinach']);
+const FEED_ROOT=new Set(['potato','sweetpotato','beet','radish','carrot','parsnip','turnip','rutabaga','kohlrabi','garlic','shallot','onion','scallion','leek','fennel','ginger']);
+const FEED_HERB=new Set(['basil','parsley','cilantro','dill','chives','oregano','thyme','sage','rosemary','mint','chamomile','lavender','tarragon','borage']);
+const FEED_BLOOMER=new Set(['marigold','zinnia','calendula','sunflower']);
+const FEED_WOODY=new Set(['blueberry','raspberry','grape','kiwi','apple','greenapple','pear','peach','cherry','lemon','orange','olive','avocado','mango','banana','pineapple','coconut','rose']);
+const FEED_SKIP=new Set(['nasturtium','mushroom']);
+const FEED_NOTE={
+  nasturtium:'Skip added fertilizer. Rich soil grows more leaves and fewer flowers.',
+  mushroom:'No fertilizer here. It feeds on the wood chips, so just keep the bed moist.',
+  tomato:'Work crushed eggshell into the planting hole too, for calcium. It helps prevent blossom-end rot.',
+  cherrytom:'Work crushed eggshell into the planting hole too, for calcium. It helps prevent blossom-end rot.',
+  blueberry:'It needs acidic soil, pH 4.5 to 5.5. Use an acid-forming feed (such as Holly-tone) in place of the all-purpose feed, and check pH yearly.',
+  asparagus:'Top-dress with the all-purpose feed as spears emerge each spring, and stop once you quit cutting so the ferns can recharge the roots. No bloom formula needed.',
+  tulip:'Work worm castings into the planting hole in fall. Once established, feed once a year with a bulb fertilizer (a 5-10-5 type), either as shoots come up or after the flowers fade, not both.',
+};
+function feedText(c){
+  if(FEED_SKIP.has(c.id))return FEED_NOTE[c.id];
+  if(c.id==='asparagus')return`Worm castings at planting. ${FEED_NOTE.asparagus}`;
+  if(c.id==='tulip')return FEED_NOTE.tulip;
+  let base;
+  if(FEED_FRUITING.has(c.id))base='Worm castings at planting, then the all-purpose feed every 1 to 2 wk through vegetative growth. Switch to the bloom formula at first flowers and keep it up through harvest.';
+  else if(FEED_HEADING.has(c.id))base='Worm castings at planting, then the all-purpose feed every 2 to 3 wk. Switch to the bloom formula once heads start to form, to size them up.';
+  else if(FEED_ROOT.has(c.id))base='Worm castings at planting, then the all-purpose feed every 2 to 3 wk. Stop feeding once roots or bulbs begin to swell, so they finish and store well.';
+  else if(FEED_LEAFY.has(c.id))base='Worm castings at planting, then a light all-purpose feed every 2 to 3 wk. Skip the bloom formula. It’s the leaves you want, not flowers.';
+  else if(FEED_HERB.has(c.id))base='Worm castings at planting. Skip further feeding, or give one light all-purpose feed if growth looks pale or slow.';
+  else if(FEED_BLOOMER.has(c.id))base='Worm castings at planting, then the all-purpose feed every 2 to 3 wk while it fills out. Switch to the bloom formula once buds show, and deadhead to keep it flowering.';
+  else if(FEED_WOODY.has(c.id))base='Worm castings at planting and again each early spring. All-purpose feed at bud break, then the bloom formula from flowering through fruit set. Ease off after harvest.';
+  else return null;
+  const note=FEED_NOTE[c.id];
+  return note?`${base} ${note}`:base;
+}
+
+/* ---------- life cycle (start to after harvest) ----------
+   Every figure below comes from the source named next to it (keys in SOURCES).
+   Crops a source doesn't cover get no number: the card says so instead of guessing. */
+/* Harrington soil-temperature data, via OSU Extension: [min °F, best range °F, days to sprout at 59°F, days at 77°F] */
+const LC_GERM={};
+[['asparagus',50,'60 to 85',24,10],['bushbean polebean',60,'60 to 85',16,8],['beet',40,'50 to 85',10,5],['cabbage',40,'45 to 85',9,4],
+ ['carrot',40,'45 to 85',10,6],['cauliflower',40,'45 to 85',10,5],['chard',40,'50 to 85',null,null],['corn',50,'60 to 95',12,4],
+ ['cucumber',60,'60 to 95',13,4],['eggplant',60,'75 to 90',13,5],['lettuce romaine',35,'40 to 80',4,2],['cantaloupe',60,'75 to 95',null,4],
+ ['onion',35,'50 to 95',7,4],['parsley',40,'50 to 85',17,13],['parsnip',35,'50 to 70',19,15],['pea',40,'40 to 75',9,6],
+ ['pepper hotpepper',60,'65 to 95',25,8],['pumpkin',60,'70 to 90',null,null],['radish',40,'45 to 90',6,3],['spinach',35,'45 to 75',7,5],
+ ['zucchini yellowsquash wintersquash',60,'70 to 95',null,null],['tomato cherrytom',50,'60 to 85',14,6],['turnip',40,'60 to 105',3,1],
+ ['watermelon',60,'70 to 95',null,5]].forEach(([ids,...v])=>ids.split(' ').forEach(id=>LC_GERM[id]={v,src:'harr'}));
+/* Same Harrington data as published by UC Master Gardeners, for crops OSU's table leaves out */
+LC_GERM.okra={v:[60,'85 to 95',27,13],src:'ucanr'};
+LC_GERM.celery={v:[40,null,12,null],src:'ucanr',note:'Barely sprouts at 77°F or warmer.'};
+LC_GERM.leek={v:[32,'65 to 85',null,null],src:'ucanr'};
+/* CSU GardenNotes #720: [seed depth, days to germinate] */
+const LC_SOW={};
+[['beet','¾ to 1 in.','7 to 10'],['broccoli cabbage cauliflower kohlrabi','½ in.','3 to 10'],['carrot','¼ in.','10 to 17'],
+ ['leek onion scallion','¼ in.','7 to 12'],['lettuce','¼ in.','4 to 10'],['parsnip','½ in.','15 to 25'],['pea','1 in.','6 to 15'],
+ ['radish turnip','½ in.','3 to 10'],['spinach','½ in.','6 to 14'],['chard','1 in.','7 to 10'],['bushbean polebean','1 to 1½ in.','6 to 14'],
+ ['cantaloupe watermelon zucchini yellowsquash','1 to 1½ in.','3 to 12'],['wintersquash','1 to 1½ in.','6 to 10'],['corn','1 to 1½ in.','5 to 10'],
+ ['cucumber','1 in.','6 to 10'],['eggplant','¼ in.','7 to 14'],['pepper hotpepper','¼ in.','10 to 20'],['tomato cherrytom','¼ in.','6 to 14'],
+ ['potato','4 to 6 in.',null]].forEach(([ids,d,g])=>ids.split(' ').forEach(id=>LC_SOW[id]=[d,g]));
+/* UMaine Bulletin #2751 transplant table: [days to germinate, best soil °F, weeks from seeding to transplant] */
+const LC_TX={};
+[['broccoli','7 to 10','50 to 85','5 to 7'],['cabbage','4 to 10','50 to 85','5 to 7'],['celery','9 to 21','50 to 65','10 to 12'],
+ ['cucumber','6 to 10','65 to 85','4'],['eggplant','6 to 10','65 to 85','6 to 9'],['lettuce','6 to 8','50 to 65','3 to 5'],
+ ['cantaloupe watermelon','6 to 8','65 to 85','3 to 4'],['onion','7 to 10','65 to 85','8'],['pepper hotpepper','9 to 14','65 to 85','6 to 8'],
+ ['zucchini yellowsquash wintersquash','4 to 6','65 to 85','3 to 4'],['tomato cherrytom','6 to 12','65 to 85','5 to 7']]
+ .forEach(([ids,...v])=>ids.split(' ').forEach(id=>LC_TX[id]=v));
+/* Harvest signs from UMN Extension (garlic from UNH) */
+const LC_SIGN={
+  bushbean:'2 to 3 weeks after bloom, while the seeds are still immature.',polebean:'2 to 3 weeks after bloom, while the seeds are still immature.',
+  beet:'At 1¼ to 3 in. across.',broccoli:'While the buds are still tight and green.',brussels:'When sprouts are about 1 in. across.',
+  cabbage:'When heads are compact and firm.',carrot:'When the root tops are about 1 in. across.',cauliflower:'While still white, before the curds turn “ricey.”',
+  corn:'When silks are dry and brown and a kernel cut with a thumbnail is milky.',cucumber:'Slicers at about 6 in. long.',eggplant:'Before the skin color dulls.',
+  kohlrabi:'At 2 to 3 in. across.',lettuce:'While leaves are tender.',romaine:'While leaves are tender.',spinach:'While leaves are tender.',
+  cantaloupe:'When it slips off the vine easily, feels firm and the netting is even.',onion:'When the necks are tight and the scales are dry.',
+  parsnip:'At the size you want, or after a light frost.',pepper:'At the size or color you want.',hotpepper:'At the size or color you want.',
+  potato:'When the vines die back.',pumpkin:'When the shell is hard, before a frost.',wintersquash:'When the shell is hard, before a frost.',
+  radish:'Up to 1¼ in. across.',zucchini:'At 4 to 6 in. long.',yellowsquash:'At 4 to 6 in. long.',tomato:'When uniformly pink or red.',
+  cherrytom:'When uniformly pink or red.',watermelon:'When the underside turns yellow or it sounds dull when slapped.',
+  basil:'While leaves are still tender.',turnip:'At the size you want.',rutabaga:'At the size you want.',
+  pea:'While pods are still tender.'
+};
+const LC_SIGN_SRC={garlic:'unhgarlic'};
+LC_SIGN.garlic='When the lower third of the leaves turn yellow, usually late June to mid-July.';
+/* Storage and after-harvest care: [text, source key] */
+const LC_GREENS=['Keep at 32 to 36°F and 95 to 98% humidity. Greens last 1 to 2 weeks.','sdsustore'];
+const LC_TREE=['Prune in March or April, after the deep cold but before buds break. Cut out dead, damaged and diseased wood and branches that rub. Take no more than a third of the canopy in a year.','unhprune'];
+const LC_HERBMULCH=['For winter, mulch hardy perennial herbs with 2 to 5 in. of straw, compost or leaves.','umnherbs'];
+const LC_CITRUS=[['Citrus won’t ripen after picking, so taste one or two first. Ripe fruit can hang on the tree for months. Wash it only right before eating.','ufcitrus'],['In a pot, you can bring it inside ahead of a freeze.','ufcitrus']];
+const LC_STORE={
+  tomato:[['Keep at about 55°F. Don’t refrigerate: below 40°F it loses color, firmness and flavor. Lasts about 5 days.','umnstore']],
+  pepper:[['Store at about 55°F in a perforated bag, or refrigerate briefly. Pitting starts below 45°F. Lasts about 2 weeks.','umnstore']],
+  eggplant:[['Store at about 55°F in a perforated bag, or refrigerate briefly. Damage starts below 50°F. Lasts about 1 week.','umnstore']],
+  sweetpotato:[['Cure 10 to 14 days in a warm, shady spot. Then store at 55 to 60°F and 85 to 90% humidity for 4 to 6 months.','isustore']],
+  broccoli:[['Keep cold and moist. Lasts about 2 weeks.','umnstore']],cauliflower:[['Keep cold and moist. Lasts about 3 weeks.','umnstore']],
+  cabbage:[['Keep cold and moist. Lasts up to about 5 months.','umnstore']],brussels:[['Keep cold and moist. Lasts about 1 month.','umnstore']],
+  kale:[LC_GREENS],collards:[LC_GREENS],mustard:[LC_GREENS],bokchoy:[LC_GREENS],arugula:[LC_GREENS],endive:[LC_GREENS],radicchio:[LC_GREENS],chard:[LC_GREENS],
+  lettuce:[['Keep cold and moist. Lasts about 1 week.','umnstore']],spinach:[['Keep cold and moist. Lasts about 10 days.','umnstore']],
+  corn:[['Keep cold and moist. Use within about 5 days.','umnstore']],kohlrabi:[['Remove the tops. Keep cold and moist. Lasts about 2 months.','umnstore']],
+  parsnip:[['Keep cold and moist. Don’t wax or freeze. Two weeks at 32°F sweetens them. Lasts about 4 months.','umnstore']],
+  potato:[['Cure 2 weeks at 50 to 60°F and 85 to 90% humidity. Then store in the dark at 40°F and 90 to 95% humidity for 5 to 8 months.','isustore']],
+  beet:[['Cut off the tops. Store at 32 to 35°F and 95% humidity for 1 to 3 months.','isustore']],
+  bushbean:[['Keep cold and moist. Pitting starts below 40°F. Lasts about 1 week.','umnstore']],pea:[['Keep cold and moist. Lasts about 1 week.','umnstore']],
+  turnip:[['Keep cold and moist. Lasts about 4 months.','umnstore']],rutabaga:[['Keep cold and moist. Don’t wax. Lasts about 4 months.','umnstore']],
+  garlic:[['Cure with the tops on for several weeks somewhere dry and airy, like a garage, barn or attic. Store cool (just above 32°F) and dry. Keeps 6 to 7 months.','unhgarlic']],
+  onion:[['Cure 2 to 3 weeks, until the tops and necks are fully dry. Store at 32 to 40°F and 65 to 70% humidity for 5 to 8 months.','isustore']],
+  scallion:[['Keep at 32 to 36°F and 95 to 98% humidity. Lasts 3 to 4 weeks.','sdsustore']],
+  radish:[['Remove the tops. Keep cold and moist. Lasts about 1 month.','umnstore']],
+  carrot:[['Remove the tops. Store at 32 to 35°F and 98 to 100% humidity for 4 to 6 months.','isustore']],
+  cucumber:[['Store at about 55°F in a perforated bag, or refrigerate briefly. Pitting starts below 40°F. Keep away from apples and tomatoes. Lasts about 1 week.','umnstore']],
+  zucchini:[['Store at about 55°F in a perforated bag. Don’t refrigerate more than 4 days. Lasts about 1 week.','umnstore']],
+  wintersquash:[['Cure at 80 to 85°F and 80 to 85% humidity, except acorn types. Store at 50 to 55°F. Acorn keeps 5 to 8 weeks, butternut 2 to 3 months, Hubbard 5 to 6 months.','isustore'],['UMN says curing isn’t needed, so sources differ. Either way, store cool and dry.','umnstore']],
+  pumpkin:[['Store at 55 to 60°F and 65% humidity for 2 to 3 months.','sdsustore'],['Very sensitive to temperatures below 45°F.','umnstore']],
+  asparagus:[['Store upright, cold and moist. Lasts about 2 weeks.','umnstore']],
+  cantaloupe:[['Keep cold and moist. Lasts about 1 week.','umnstore']],
+  watermelon:[['Store at about 55°F, or refrigerate briefly. It decays below 50°F after a few days. Lasts about 2 weeks.','umnstore']],
+  basil:[['Keep at room temperature with the stems in water. It discolors in the fridge. Lasts about 5 days.','umnstore']],
+  lemon:LC_CITRUS,orange:LC_CITRUS
+};
+LC_STORE.cherrytom=LC_STORE.tomato;LC_STORE.hotpepper=LC_STORE.pepper;LC_STORE.polebean=LC_STORE.bushbean;
+LC_STORE.romaine=LC_STORE.lettuce;LC_STORE.yellowsquash=LC_STORE.zucchini;
+const LC_AFTER={
+  asparagus:[['Stop cutting about July 1, then let the ferns grow. They store energy in the roots for next year’s spears.','umnasp']],
+  strawberry:[['June-bearing: within 2 weeks after harvest, thin plants to 6 to 8 in. apart and mow the leaves before August 1. New leaves fill in by mid-August.','umnstraw'],['Once plants are dormant and temperatures stay below 40°F, cover them with 4 to 6 in. of straw.','umnstraw']],
+  raspberry:[['Summer-bearing: after the last harvest, cut every cane that fruited to the ground. Fall-bearing only: cut all canes at the base in early spring.','umnrasp']],
+  blueberry:[['Prune once a year, late in the dormant season.','unhprune']],grape:[['Prune every year, late in the dormant season.','unhprune']],
+  apple:[LC_TREE],greenapple:[LC_TREE],pear:[LC_TREE],peach:[LC_TREE],cherry:[LC_TREE],
+  garlic:[['Plant next year’s cloves in October or November, pointed end up, 2 to 3 in. deep. Once the ground freezes, mulch with 4 in. of straw, leaves or grass clippings.','unhgarlic']],
+  tulip:[['Snap off flowers as they fade. Leave the leaves until they turn brown, as late as early July. Cutting them early means fewer flowers next spring.','isubulb']],
+  rose:[['After hard frosts kill the leaves and a few nights reach the mid-teens, mound soil 10 to 12 in. around the base of hybrid teas and floribundas. Leave 18 to 24 in. of cane: cut less in fall and more in spring.','unhrose']],
+  chives:[LC_HERBMULCH,['Divide clumps in early spring.','umnherbs']],thyme:[LC_HERBMULCH,['Creeping thyme can be divided in early spring.','umnherbs']],
+  oregano:[LC_HERBMULCH],sage:[LC_HERBMULCH],mint:[LC_HERBMULCH],lavender:[LC_HERBMULCH],tarragon:[LC_HERBMULCH]
+};
+/* Crops that stay in place, so the "pull it and clean up" step doesn't apply */
+const LC_NOPULL=new Set(['mushroom','ginger']);
+/* Warm-season crops started indoors: the heat mat is required, not optional */
+function heatMat(c){
+  if(!c.indoor||c.method==='plant')return null;
+  if(c.frost==='T')return'need';
+  if(LC_TX[c.id]&&LC_TX[c.id][1]==='50 to 65')return'skip';
+  return'optional';
+}
+function lcCite(k){
+  if(k==='gen')return'<span class="cite">general guidance</span>';
+  if(k==='you')return'<span class="cite">your feeding plan</span>';
+  if(k==='entry')return'<span class="cite">your entry</span>';
+  if(k==='pd')return'<span class="cite">from your planted date</span>';
+  const s=SOURCES[k];return s?`<a class="cite" href="${s.url}" target="_blank" rel="noopener noreferrer" title="${esc(s.name)}">${esc(s.short)}</a>`:'';
+}
+function lcLine(t,k,cls){return`<p${cls?` class="${cls}"`:''}>${t} ${lcCite(k)}</p>`;}
+const LC_STAGE_OF={planned:0,indoors:0,planted:2,harvesting:3,done:4};
+const LC_KEY={'Start':0,'Plant out':1,'Sow and space':1,'Grow':2,'Harvest':3,'After harvest':4};
+/* sq = the selected square ({st,pd,v}) when shown on Beds; the list then focuses on the square's current stage */
+function lifecycleHTML(c,year,sq){
+  const custom=c.id.startsWith('custom_'),d=cropDates(c,year),g=LC_GERM[c.id],sow=LC_SOW[c.id],tx=LC_TX[c.id],mat=heatMat(c);
+  const tSrc=custom?'entry':UNH_TIMING.has(c.id)?'unh':'gen';
+  const st=[];
+  /* 1. Start */
+  let s='';
+  if(c.method==='plant'){
+    if(c.id==='garlic')s+=lcLine('Plant cloves, pointed end up, 2 to 3 in. deep, in October or November.','unhgarlic');
+    else if(c.id==='tulip')s+=lcLine('Grown from bulbs planted in fall.','gen');
+    else if(c.id==='mushroom')s+=lcLine('Grown from mushroom spawn mixed into a wood-chip bed, not seed.','gen');
+    else if(sow)s+=lcLine(`Plant ${sow[0]} deep.`,'csu');
+    else s+=lcLine(c.peren?'Grown from a nursery plant, crown or division, not seed.':'Grown from sets, slips or pieces, not seed.','gen');
+  }else{
+    if(c.indoor){
+      s+=lcLine(`Start indoors ${c.indoor} wks before your last frost${d&&d.indoor?`, around <b class="mono">${fmt(d.indoor)}</b>`:''}.`,tSrc);
+      if(mat==='need')s+=lcLine('<b>You need a heat mat for this one.</b> Set it to warm the mix to about 70°F.','umaine','mat');
+      else if(mat==='skip')s+=lcLine(`<b>Skip the heat mat.</b> It sprouts best at ${tx[1]}°F soil, so room temperature is right.`,'umaine');
+      else s+=lcLine('Heat mat optional. It speeds sprouting but isn’t required for this cool-season crop.','umaine');
+      s+=lcLine(`Cover the tray with a clear humidity dome. When about half the seeds sprout, take off the dome${mat==='skip'?'':', take the tray off the heat mat,'} and move it under lights 2 to 4 in. above the plants for 16 hours a day.`,'umaine');
+      if(tx)s+=lcLine(`Sprouts in ${tx[0]} days at ${tx[1]}°F soil. Ready to transplant ${tx[2]} weeks after seeding.`,'umaine');
+      if(c.method==='sow')s+=lcLine(`Or skip the head start and sow outdoors${d&&d.out?` around <b class="mono">${fmt(d.out)}</b>`:''}, once the soil is warm enough (below).`,tSrc);
+    }else if(c.out==null&&d&&d.fall){
+      s+=lcLine(`Direct sow for a fall crop, around <b class="mono">${fmt(d.fall)}</b>. No heat mat or dome needed.`,tSrc);
+    }else{
+      s+=lcLine(`Direct sow outdoors${d&&d.out?` around <b class="mono">${fmt(d.out)}</b>`:''}. No heat mat or dome needed.`,tSrc);
+    }
+    if(g){const [mn,best,d59,d77]=g.v;
+      s+=lcLine(`Soil temperature: sprouts above ${mn}°F${best?`, best at ${best}°F`:''}.${d77&&d59?` About ${d77} days to come up at 77°F vs ${d59} days at 59°F.`:d59?` About ${d59} days to come up at 59°F.`:d77?` About ${d77} days to come up at 77°F.`:''}${g.note?' '+g.note:''}`,g.src);}
+    if(sow)s+=lcLine(`Sow ${sow[0]} deep.${sow[1]?` Sprouts in ${sow[1]} days.`:''}`,'csu');
+    else if(!custom)s+=lcLine('No crop-specific depth in our sources. Cover seed 1 to 2 times its own width, and follow the packet.','umaine');
+  }
+  st.push(['Start',s]);
+  /* 2. Plant out */
+  let p='';
+  if(c.indoor&&c.method!=='plant')p+=lcLine('Harden off for 1 to 2 weeks: start with a few hours in a sheltered, semi-shady spot, then add time and sun each day.','umaine');
+  if(c.out!=null)p+=lcLine(`${c.method==='sow'&&!c.indoor?'Sow':c.method==='tx'||c.indoor?'Transplant':'Plant'} ${c.out===0?'at':`${Math.abs(c.out)} wk${Math.abs(c.out)===1?'':'s'} ${c.out<0?'before':'after'}`} your last frost${d&&d.out?`, around <b class="mono">${fmt(d.out)}</b>`:''}.`,tSrc);
+  else if(c.fall!=null&&!c.days)p+=lcLine('Plant in fall. See the dates above.',tSrc);
+  const sp=SPACING_SRC[c.id];
+  p+=lcLine(`Spacing: ${esc(spacingLabel(c))}${c.est?' (estimate)':''}.`,custom?'entry':sp||'gen');
+  st.push([c.method==='sow'&&!c.indoor?'Sow and space':'Plant out',p]);
+  /* 3. Grow */
+  let gr='';
+  if(c.tip)gr+=lcLine(esc(c.tip),custom?'entry':'gen');
+  const f=feedText(c);if(f)gr+=lcLine(`<b>Feeding:</b> ${esc(f)}`,'you');
+  if(gr)st.push(['Grow',gr]);
+  /* 4. Harvest */
+  let h='';
+  if(c.peren&&c.yrs)h+=lcLine(`First crop in year ${c.yrs} after planting.`,'gen');
+  if(d&&d.harvest&&!(sq&&sq.pd))h+=lcLine(`First harvest around <b class="mono">${fmt(d.harvest)}</b> (${c.days} days).`,tSrc);
+  if(sq&&sq.pd&&typeof daysFor==='function'){const dd=daysFor(c,sq.v);if(dd&&dd<200)h+=lcLine(`Planted <b class="mono">${fmt(parseISO(sq.pd))}</b>, so expect first picks around <b class="mono">${fmt(addDays(parseISO(sq.pd),dd))}</b> (${dd} days${sq.v?` for ${esc(sq.v)}`:''}).`,'pd');}
+  if(LC_SIGN[c.id])h+=lcLine(`Ready: ${esc(LC_SIGN[c.id])}`,LC_SIGN_SRC[c.id]||'umnstore');
+  if(c.harvest)h+=lcLine(esc(c.harvest),custom?'entry':'gen');
+  if(h)st.push(['Harvest',h]);
+  /* 5. After harvest */
+  let a='';
+  (LC_STORE[c.id]||[]).forEach(([t,k])=>a+=lcLine(esc(t),k));
+  (LC_AFTER[c.id]||[]).forEach(([t,k])=>a+=lcLine(esc(t),k));
+  if(!c.peren&&!LC_NOPULL.has(c.id)&&!custom){
+    a+=lcLine('When the plant is done, pull it. Bag and trash diseased plants, roots and all. Never compost them. Chop healthy plants and compost them or work them into the soil.','sdsuclean');
+    if(['broccoli','cauliflower','cabbage'].includes(c.id))a+=lcLine('Working cabbage-family plants into the soil can reduce some diseases.','sdsuclean');
+  }
+  if(!a)a='<p class="hint">No sourced storage or after-harvest steps for this crop yet. Check your local extension office.</p>';
+  st.push(['After harvest',a]);
+  if(!sq)return`<ol class="life" aria-label="Life cycle">${st.map(([t,b])=>`<li><h3>${t}</h3>${b}</li>`).join('')}</ol>`;
+  const stat=sq.st||'planned',cur=LC_STAGE_OF[stat]??0;
+  const lbl=i=>i===cur?'Now':i===cur+1?'Next':i<cur?'Done':'Later';
+  return`<p class="hint life-intro">Focused on <b>${esc(statusLabel(stat))}</b>. Change the progress above and this updates. Tap a closed step to open it.</p>
+    <ol class="life staged" aria-label="Life cycle">${st.map(([t,b])=>{const i=LC_KEY[t],l=lbl(i),cls=i===cur?'now':i<cur?'past':'';
+      const head=`${t} <span class="st-lbl st-${l.toLowerCase()}">${l}</span>`;
+      return i===cur||i===cur+1?`<li class="${cls}"><h3>${head}</h3>${b}</li>`:`<li class="${cls}"><details><summary>${head}</summary>${b}</details></li>`;}).join('')}</ol>`;
+}
+
 /* Ground types */
 const TERRAIN={
   grass:{name:'Grass',plant:false},
@@ -1120,7 +1376,24 @@ const SOURCES={
   unhcool:{short:'UNH cool-season guide',name:'UNH Extension: Cool Season Vegetables',url:'https://extension.unh.edu/blog/2019/04/cool-season-vegetables'},
   umn:{short:'UMN Extension',name:'University of Minnesota Extension: Planting and growing guides',url:'https://extension.umn.edu/how/planting-and-growing-guides'},
   usda:{short:'USDA zone map',name:'USDA Plant Hardiness Zone Map',url:'https://planthardiness.ars.usda.gov/'},
-  almanac:{short:'Almanac frost dates',name:'Old Farmer’s Almanac: frost dates by ZIP',url:'https://www.almanac.com/gardening/frostdates'}
+  almanac:{short:'Almanac frost dates',name:'Old Farmer’s Almanac: frost dates by ZIP',url:'https://www.almanac.com/gardening/frostdates'},
+  harr:{short:'Harrington (OSU)',name:'OSU Extension: Soil temperature conditions for vegetable seed germination (J.F. Harrington data)',url:'https://extension.oregonstate.edu/gardening/soil-compost/soil-temperature-conditions-vegetable-seed-germination'},
+  ucanr:{short:'UC Master Gardeners',name:'UC Master Gardener Program: Seed germination temperature and timing (Harrington data)',url:'https://ucanr.edu/program/uc-master-gardener-program/seed-germination-temperature-and-timing'},
+  csu:{short:'CSU GardenNotes #720',name:'Colorado State Extension, CMG GardenNotes #720: Vegetable Planting Guide',url:'https://cmg.extension.colostate.edu/Gardennotes/720.pdf'},
+  umaine:{short:'UMaine #2751',name:'University of Maine Extension Bulletin #2751: Starting Seeds at Home',url:'https://extension.umaine.edu/publications/2751e/'},
+  umnstore:{short:'UMN harvest & storage',name:'UMN Extension: Harvesting and storing home garden vegetables',url:'https://extension.umn.edu/planting-and-growing-guides/harvesting-and-storing-home-garden-vegetables'},
+  sdsustore:{short:'SDSU storage',name:'SDSU Extension: Storage life of vegetables',url:'https://extension.sdstate.edu/storage-life-vegetables'},
+  isustore:{short:'Iowa State storage',name:'Iowa State Extension: Storing winter storage vegetables',url:'https://yardandgarden.extension.iastate.edu/how-to/storing-winter-storage-vegetables'},
+  sdsuclean:{short:'SDSU cleanup',name:'SDSU Extension: Fall vegetable garden cleanup',url:'https://extension.sdstate.edu/fall-vegetable-garden-cleanup'},
+  unhgarlic:{short:'UNH garlic',name:'UNH Extension: Growing garlic in New Hampshire',url:'https://extension.unh.edu/resource/growing-garlic-new-hampshire-fact-sheet'},
+  umnasp:{short:'UMN asparagus',name:'UMN Extension: Growing asparagus in home gardens',url:'https://extension.umn.edu/vegetables/growing-asparagus-home-gardens'},
+  umnstraw:{short:'UMN strawberries',name:'UMN Extension: Growing strawberries in the home garden',url:'https://extension.umn.edu/fruit/growing-strawberries-home-garden'},
+  umnrasp:{short:'UMN raspberries',name:'UMN Extension: Growing raspberries in the home garden',url:'https://extension.umn.edu/fruit/growing-raspberries-home-garden'},
+  unhprune:{short:'UNH pruning',name:'UNH Extension: It’s pruning season',url:'https://extension.unh.edu/blog/2026/03/its-pruning-season'},
+  umnherbs:{short:'UMN herbs',name:'UMN Extension: Growing herbs in home gardens',url:'https://extension.umn.edu/vegetables/growing-herbs'},
+  isubulb:{short:'Iowa State bulbs',name:'Iowa State Extension: Care of spring-flowering bulbs after bloom',url:'https://yardandgarden.extension.iastate.edu/how-to/care-spring-flowering-bulbs-after-bloom'},
+  unhrose:{short:'UNH roses',name:'UNH Extension: Winter protection of roses',url:'https://extension.unh.edu/resource/winter-protection-roses'},
+  ufcitrus:{short:'UF/IFAS citrus',name:'UF/IFAS Gardening Solutions: Citrus',url:'https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/citrus/'}
 };
 /* Which chart each crop's spacing comes from (anything not listed is marked as an estimate). */
 const SPACING_SRC={};
@@ -1485,10 +1758,10 @@ function renderBoard(){
     const k=cellAt(p,b.x,b.y),crop=k.c?getCrop(k.c):null,area=b.w*b.h,T=TERRAIN[k.t]||TERRAIN.grass;
     const sel=ui.sel&&ui.sel.x===b.x&&ui.sel.y===b.y;
     const lbl=!!crop&&b.w*cs>=64&&b.h*cs>=44;
-    const cls=`blk t-${k.t}${b.m?' merged':''}${k.tr?' tr':''}${k.fw?' fw':''}${sel?' sel':''}${lbl?' has-lbl':''}`;
+    const cls=`blk t-${k.t}${b.m?' merged':''}${k.tr?' tr':''}${k.fw?' fw':''}${k.fw&&b.h>b.w?' fwv':''}${sel?' sel':''}${lbl?' has-lbl':''}`;
     let inner='';
     if(T.icon)inner+=`<span class="ticon emo" style="font-size:${Math.max(10,Math.min(b.w,b.h)*cs*.42)}px">${T.icon}</span>`;
-    let tip=`${locName(b)} · ${T.name}${area>1?` · ${b.w}×${b.h} ft`:''}${k.fw?' · Florida weave':''}`;
+    let tip=`${locName(b)} · ${T.name}${area>1?` · ${b.w}×${b.h} ft`:''}${k.fw?` · Florida weave${b.h>b.w?' (north–south)':''}`:''}`;
     if(crop){
       inner+=cropVisual(crop,b,cs,lbl);
       const cnt=plantCount(crop,area);
@@ -1656,7 +1929,7 @@ function unmerge(p,m){
 }
 
 /* ---------- inspector ---------- */
-function adviceHTML(c,year,compact){
+function adviceHTML(c,year,compact,sq){
   const d=cropDates(c,year),notes=zoneNotes(c,year);
   let dates='';
   if(d){
@@ -1674,7 +1947,7 @@ function adviceHTML(c,year,compact){
   return`${compact?'':`<div class="advice-head"><span class="emo" aria-hidden="true">${esc(c.icon)}</span><div><h2 class="h3">${esc(c.name)}</h2><div class="tags">
     <span class="tag">${esc(spacingLabel(c))}${c.est?' ≈':''}</span>${c.days&&c.days<200?`<span class="tag">${c.days} days</span>`:''}<span class="tag t-${c.frost}">${FROST_NAMES[c.frost]}</span><span class="tag">${esc(c.sun)}</span>${c.trellis?'<span class="tag">Trellis</span>':''}${c.peren?'<span class="tag">Perennial</span>':''}</div></div></div>`}
     ${dates}${notes.length?`<ul class="notes">${notes.map(n=>`<li class="${n.ok?'ok':''}">${esc(n.t)}</li>`).join('')}</ul>`:''}
-    <div class="prose">${c.tip?`<p><b>Growing:</b> ${esc(c.tip)}</p>`:''}${c.harvest?`<p><b>Harvest:</b> ${esc(c.harvest)}</p>`:''}</div>${sourcesHTML(c)}`;
+    ${lifecycleHTML(c,year,sq)}${sourcesHTML(c)}`;
 }
 function srcLink(k){const s=SOURCES[k];return`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`;}
 function sourcesHTML(c){
@@ -1684,7 +1957,8 @@ function sourcesHTML(c){
     ['Spacing',sp?L(sp):'Estimate for trees and shrubs'],
     ['Timing',UNH_TIMING.has(c.id)?L('unh'):`General guidance, see ${L('umn')}`],
     ['Frost',`${L('usda')} · ${L('almanac')}`],
-    ['Tips',`General guidance, see ${L('umn')}`]];
+    ['Tips',`General guidance, see ${L('umn')}`],
+    ['Life cycle','Each line on the card links its own source']];
   const lead=custom?'your entry':[sp?SOURCES[sp].short:'estimate',UNH_TIMING.has(c.id)?'UNH Extension':null].filter(Boolean).join(', ');
   return`<details class="srcs"><summary>Sources <span>${esc(lead)}</span></summary><dl>${rows.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl></details>`;
 }
@@ -1701,7 +1975,7 @@ function checklistHTML(){
   const next=CHECKLIST.find(([k])=>!o.done[k]);
   return`<div class="sec check-card"><div class="ck-head"><p class="eyebrow">Getting started</p><button class="icon-btn" id="ck-hide" aria-label="Hide checklist" title="Hide checklist">✕</button></div>
     <h2 class="h3">${n} of ${CHECKLIST.length} done${n>=CHECKLIST.length-2?'. Almost there':''}</h2>
-    <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="${CHECKLIST.length}" aria-valuenow="${n}"><i style="width:${n/CHECKLIST.length*100}%"></i></div>
+    <div class="meter" role="progressbar" aria-label="Getting started progress" aria-valuemin="0" aria-valuemax="${CHECKLIST.length}" aria-valuenow="${n}"><i style="width:${n/CHECKLIST.length*100}%"></i></div>
     <ol class="cklist">${CHECKLIST.map(([k,l])=>`<li class="${o.done[k]?'ok':k===next[0]?'next':''}"><span class="tick" aria-hidden="true">${o.done[k]?'✓':''}</span>${esc(l)}${k===next[0]?`<button class="btn sm primary" data-ck="${k}">${{zone:'Set zone',bed:'Pick Bed tool',plant:'Pick a crop',track:'Show me',harvest:'Log one'}[k]||'Go'}</button>`:''}</li>`).join('')}</ol></div>`;
 }
 function bindChecklist(){
@@ -1750,7 +2024,7 @@ function renderInspector(){
         <label class="check big-check"><input type="checkbox" id="in-tr" ${k.tr?'checked':''}> Trellis on the north edge</label>
         <label class="check big-check"><input type="checkbox" id="in-fw" ${k.fw?'checked':''}${plantable(k.t)?'':' disabled'}> Florida weave (string &amp; posts)</label>
         <div class="row-btns">${crop?`<button class="btn" id="in-clear">Clear crop</button>`:''}${b.m?`<button class="btn" id="in-split">Split block</button>`:''}</div></details></div>`;
-    if(crop)h+=`<div class="sec">${varietiesHTML(crop)}${adviceHTML(crop,p.year)}<div class="row-btns"><button class="btn" data-edit="${esc(crop.id)}">Edit this crop</button></div></div>`;
+    if(crop)h+=`<div class="sec">${varietiesHTML(crop)}${adviceHTML(crop,p.year,false,k)}<div class="row-btns"><button class="btn" data-edit="${esc(crop.id)}">Edit this crop</button></div></div>`;
   }else{
     h+=checklistHTML();
     if(ui.tool==='plant'&&ui.crop&&getCrop(ui.crop)){
@@ -2136,11 +2410,13 @@ function copyText(txt,okMsg){
 function renderGuide(){
   const q=ui.guideQ.trim().toLowerCase(),yr=plan().year;
   const list=state.catalog.filter(c=>(ui.guideCat==='all'||c.cat===ui.guideCat)&&(!q||c.name.toLowerCase().includes(q)));
-  let h=`<div class="doc-in"><div class="doc-head"><div><p class="eyebrow">Crop guide${state.settings.zone?` · zone ${esc(state.settings.zone)}`:''}</p><h1>Spacing and planting dates for ${state.catalog.length} crops</h1>
-    <p>Each card shows its sources. Tips are general guidance, not a guarantee. Edit any crop to match your seed packet.</p></div>
+  let h=`<div class="doc-in"><div class="doc-head"><div><p class="eyebrow">Crop guide${state.settings.zone?` · zone ${esc(state.settings.zone)}`:''}</p><h1>Life cycle, spacing and dates for ${state.catalog.length} crops</h1>
+    <p>Each card walks the full life cycle: start, plant out, grow, harvest and after harvest. Every line links its source. Where our sources have no number, the card says so instead of guessing. Varieties differ, so check your seed packet too.</p>
+    <p class="hint"><b>Seed-starting setup:</b> the guide assumes you start seeds on a heat mat under a clear humidity dome. Crops tagged <span class="tag t-mat">Heat mat + dome</span> won’t sprout reliably without the mat, so get one before you sow them.</p>
+    <p class="hint">Feeding follows one plan for almost everything: worm castings at planting, an all-purpose feed (e.g. 20-20-20) through leafy growth, and a bloom formula (e.g. 10-30-20) once a crop flowers or fruits. Each card’s <b>Feeding</b> line says when to switch, and flags the few crops that want something else.</p></div>
     <div class="filters"><input type="search" id="g-q" placeholder="Search crops…" value="${esc(ui.guideQ)}" aria-label="Search crops"><select id="g-cat" aria-label="Category"><option value="all">All categories</option>${Object.entries(CAT_NAMES).map(([k,v])=>`<option value="${k}" ${ui.guideCat===k?'selected':''}>${v}</option>`).join('')}</select>
     <button class="btn primary" id="g-add">+ Add crop</button><button class="btn" id="g-reset">Restore defaults</button>${state.settings.zone?'':'<button class="btn" id="g-zone">Set zone</button>'}</div></div>
-    <div class="guide-grid">${list.map(c=>`<article class="card"><div class="top-row"><span class="emo" aria-hidden="true">${esc(c.icon)}</span><div><h2 class="h3">${esc(c.name)}</h2><div class="tags"><span class="tag">${esc(spacingLabel(c))}${c.est?' ≈':''}</span>${c.days&&c.days<200?`<span class="tag">${c.days} days</span>`:''}<span class="tag t-${c.frost}">${FROST_NAMES[c.frost]}</span>${c.trellis?'<span class="tag">Trellis</span>':''}${c.peren?`<span class="tag">Perennial ${c.peren[0]}–${c.peren[1]}</span>`:''}</div></div>
+    <div class="guide-grid">${list.map(c=>`<article class="card"><div class="top-row"><span class="emo" aria-hidden="true">${esc(c.icon)}</span><div><h2 class="h3">${esc(c.name)}</h2><div class="tags"><span class="tag">${esc(spacingLabel(c))}${c.est?' ≈':''}</span>${c.days&&c.days<200?`<span class="tag">${c.days} days</span>`:''}<span class="tag t-${c.frost}">${FROST_NAMES[c.frost]}</span>${c.trellis?'<span class="tag">Trellis</span>':''}${c.peren?`<span class="tag">Perennial ${c.peren[0]}–${c.peren[1]}</span>`:''}${heatMat(c)==='need'?'<span class="tag t-mat" title="Won’t sprout reliably without bottom heat">Heat mat + dome</span>':''}</div></div>
       <span class="acts"><button class="icon-btn" data-edit="${esc(c.id)}" title="Edit" aria-label="Edit ${esc(c.name)}">✎</button><button class="icon-btn" data-del="${esc(c.id)}" title="Delete" aria-label="Delete ${esc(c.name)}">✕</button></span></div>
       ${varietiesHTML(c)}${adviceHTML(c,yr,true)}</article>`).join('')||'<div class="empty">No crops match.</div>'}</div>
     <p class="srcnote">Open <b>Sources</b> on any card to see where its numbers come from. The full list is on the <a href="#help" data-go-help>Help tab</a>. Varieties differ, so check your seed packet too.</p></div>`;
@@ -2541,7 +2817,7 @@ function renderHelp(){
 function openHelp(id){ui.faqOpen=id;switchView('help');}
 
 /* ---------- legal pages (plain, specific to how this app works) ---------- */
-const LEGAL_UPDATED='September 26, 2026';
+const LEGAL_UPDATED='September 27, 2026';
 function legalFooter(){return`<footer class="legal-foot"><a href="#privacy" data-go="privacy">Privacy</a><a href="#terms" data-go="terms">Terms</a><a href="#credits" data-go="credits">Credits</a><a href="#notes" data-go="notes">Release notes</a><span>Free, no accounts, no tracking. Your data stays in your browser.</span></footer>`;}
 function bindLegalLinks(root){$$('[data-go]',root).forEach(l=>l.onclick=e=>{e.preventDefault();switchView(l.dataset.go);});}
 function renderLegal(which){
@@ -2575,11 +2851,11 @@ function renderLegal(which){
     <h2>Your data</h2><p>What you enter belongs to you and is stored only in your browser (see the ${'<a href="#privacy" data-go="privacy">Privacy page</a>'}). The developer can’t see, back up or recover it. Export a backup if it matters to you.</p>
     <h2>Fair use of the site</h2><p>Don’t use the site to break the law, to attack or overload it, or to distribute harmful files. Don’t copy the site and present it as your own or as an official source.</p>
     <h2>Ownership and credits</h2><p>The app’s code, design, logo and original text belong to its developer. The app uses your device’s system fonts, and gardening data is credited to its sources on the ${'<a href="#credits" data-go="credits">Credits page</a>'}.</p>
-    <p>mbgarden.online is independent. It is not affiliated with or endorsed by the Square Foot Gardening Foundation, the USDA, UNH Extension, University of Minnesota Extension, Phipps Conservatory, Garden In Minutes, the Old Farmer’s Almanac, or any other garden, business or organization with a similar name. Their names are used only to credit sources.</p>
+    <p>mbgarden.online is independent. It is not affiliated with or endorsed by the Square Foot Gardening Foundation, the USDA, UNH Extension, University of Minnesota Extension, Oregon State University Extension, UC Master Gardener Program, Colorado State University Extension, University of Maine Cooperative Extension, South Dakota State University Extension, Iowa State University Extension, UF/IFAS Extension, Phipps Conservatory, Garden In Minutes, the Old Farmer’s Almanac, or any other garden, business or organization with a similar name. Their names are used only to credit sources.</p>
     <h2>No warranty</h2><p>The app is provided “as is” and “as available”, without warranties of any kind. It may have bugs, and it may change or stop being available at any time. To the extent the law allows, the developer isn’t liable for losses from using the app, including lost data or crop results.</p>
     <h2>Changes</h2><p>These terms may be updated. The date above shows the latest version.</p>`;
   else h=`<p class="eyebrow">Credits</p><h1>Sources and credits</h1><p class="updated">Last updated ${LEGAL_UPDATED}</p>
-    <h2>Gardening data</h2><p>Spacing and timing values are facts gathered from these public sources. Growing tips are written for this app as general guidance.</p>
+    <h2>Gardening data</h2><p>Spacing, timing, germination, seed-starting, harvest, storage and after-harvest values are facts gathered from these public sources and restated in the app’s own words. Each life-cycle line links the source it came from. Growing tips are written for this app as general guidance. Feeding lines follow the app’s own standardized plan and aren’t taken from these sources.</p>
     <ul>${Object.values(SOURCES).map(s=>`<li>${ext(s.url,esc(s.name))}</li>`).join('')}</ul>
     <h2>Fonts</h2><p>The app uses your device’s own system font (for example Segoe UI on Windows or San Francisco on Apple devices). No fonts are built in or downloaded.</p>
     <h2>Icons and emoji</h2><p>Crop emoji are drawn by your device’s own emoji font (from Apple, Microsoft, Google or others). The app doesn’t include any emoji images. The mbgarden.online logo is original.</p>
