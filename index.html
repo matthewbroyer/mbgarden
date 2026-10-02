@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YUcGqrIXofVN7JnwyTME3DIvbvj3os9x8Q7G8dCJbzM=' 'sha256-9936UgrWsuE0Ems+2MIgExjTzTYnz2Dv9eAgZxnE458='; style-src 'unsafe-inline'; font-src 'none'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><meta name="description" content="Free square-foot garden planner. Map beds, get planting dates for your zone, track crops and varieties, and log harvests. Your data stays in your browser.">
 <title>mbgarden.online</title>
 <script>(function(){var t=null;try{t=localStorage.getItem('mbgarden:theme');}catch(e){}document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();</script>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2213%22%20fill=%22%23B4562B%22/%3E%3Cpath%20d=%22M32%2046V32%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Crect%20x=%2218%22%20y=%2246%22%20width=%2228%22%20height=%227%22%20rx=%222%22%20fill=%22%23F2B640%22/%3E%3Cpath%20d=%22M27.3%2046.5V52.5M36.7%2046.5V52.5%22%20stroke=%22%23B4562B%22%20stroke-width=%222.2%22/%3E%3Cpath%20d=%22M32%2037C23%2037%2017.5%2031.5%2017.5%2023.5C26%2023.5%2032%2028.5%2032%2037Z%22%20fill=%22%23fff%22%20stroke=%22%23fff%22%20stroke-width=%223%22%20stroke-linejoin=%22round%22/%3E%3Cpath%20d=%22M32%2031C32%2022.5%2037.5%2016.5%2046.5%2016.5C46.5%2025%2040.5%2031%2032%2031Z%22%20fill=%22%23fff%22%20stroke=%22%23fff%22%20stroke-width=%223%22%20stroke-linejoin=%22round%22/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2213%22%20fill=%22%232F7D32%22/%3E%3Cpath%20d=%22M32%2044V30%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Crect%20x=%2218%22%20y=%2244%22%20width=%2228%22%20height=%227%22%20rx=%222%22%20fill=%22%23F2B640%22/%3E%3Cpath%20d=%22M27.3%2044.5V50.5M36.7%2044.5V50.5%22%20stroke=%22%232F7D32%22%20stroke-width=%222.2%22/%3E%3Cpath%20d=%22M32%2035C23%2035%2017.5%2029.5%2017.5%2021.5C26%2021.5%2032%2026.5%2032%2035Z%22%20fill=%22%23fff%22%20stroke=%22%23fff%22%20stroke-width=%223%22%20stroke-linejoin=%22round%22/%3E%3Cpath%20d=%22M32%2029C32%2020.5%2037.5%2014.5%2046.5%2014.5C46.5%2023%2040.5%2029%2032%2029Z%22%20fill=%22%23fff%22%20stroke=%22%23fff%22%20stroke-width=%223%22%20stroke-linejoin=%22round%22/%3E%3C/svg%3E">
 <style>
 /* ---- theme: "Utility" (Garden Terracotta) — neutral desktop-software palette, one terracotta accent, light + dark.
    Garden material tokens (grass, soil, path…) and status colours are app-specific and kept. ---- */
@@ -15,7 +15,7 @@
   --r:6px; --r-sm:4px; --ctl:38px; --ctl-sm:32px; --ease:120ms ease;
   --bg:#f3f4f6; --surface:#ffffff; --surface-2:#f6f7f9; --surface-3:#eceef2; --ink:#1b1f24; --ink-2:#48505c; --muted:#5f6773;
   --border:#dfe2e7; --border-strong:#c6cbd3; --hover-band:rgba(20,24,31,.045);
-  --accent:#b8532f; --accent-hover:#954327; --accent-ink:#ffffff; --accent-soft:rgba(184,83,47,.09); --accent-line:rgba(184,83,47,.38); --accent-2:#c9704a;
+  --accent:#2f7d32; --accent-hover:#25642a; --accent-ink:#ffffff; --accent-soft:rgba(47,125,50,.09); --accent-line:rgba(47,125,50,.38); --accent-2:#4a9a4d;
   --good:#16a34a; --good-ink:#0b7a35; --warn:#e5a100; --warn-ink:#8a5a00; --crit:#c9302c;
   --grass:#b3cf93; --grass-2:#a3c283; --soil:#4b3526; --soil-2:#5c4332; --path:#d0c7b6; --path-2:#b9ae9a;
   --mulch:#9b6a3e; --mulch-2:#7f5430; --water:#6b9fc3; --water-2:#8db7d4; --compost:#3e3b2b; --struct:#8b9096; --struct-2:#767b82;
@@ -31,7 +31,7 @@
     color-scheme:dark;
     --bg:#16181c; --surface:#1e2126; --surface-2:#25292f; --surface-3:#2d3238; --ink:#e9ecf0; --ink-2:#b4bbc5; --muted:#8e97a3;
     --border:#30353c; --border-strong:#434a53; --hover-band:rgba(255,255,255,.05);
-    --accent:#e08a5c; --accent-hover:#eda27a; --accent-ink:#2b1208; --accent-soft:rgba(224,138,92,.13); --accent-line:rgba(224,138,92,.45); --accent-2:#eaa580;
+    --accent:#6fbf73; --accent-hover:#8fd093; --accent-ink:#07200a; --accent-soft:rgba(111,191,115,.13); --accent-line:rgba(111,191,115,.45); --accent-2:#86cc89;
     --good:#22c55e; --good-ink:#4ade80; --warn:#f0b429; --warn-ink:#f5c95c; --crit:#ff6b6b;
     --grass:#3d5731; --grass-2:#36502b; --soil:#3a2a1e; --soil-2:#4a3627; --path:#5c574c; --path-2:#4b463d;
     --mulch:#6e4a2a; --mulch-2:#5a3b20; --water:#35607f; --water-2:#447596; --compost:#2a2820; --struct:#4d5258; --struct-2:#40444a;
@@ -43,7 +43,7 @@
   color-scheme:dark;
   --bg:#16181c; --surface:#1e2126; --surface-2:#25292f; --surface-3:#2d3238; --ink:#e9ecf0; --ink-2:#b4bbc5; --muted:#8e97a3;
   --border:#30353c; --border-strong:#434a53; --hover-band:rgba(255,255,255,.05);
-  --accent:#e08a5c; --accent-hover:#eda27a; --accent-ink:#2b1208; --accent-soft:rgba(224,138,92,.13); --accent-line:rgba(224,138,92,.45); --accent-2:#eaa580;
+  --accent:#6fbf73; --accent-hover:#8fd093; --accent-ink:#07200a; --accent-soft:rgba(111,191,115,.13); --accent-line:rgba(111,191,115,.45); --accent-2:#86cc89;
   --good:#22c55e; --good-ink:#4ade80; --warn:#f0b429; --warn-ink:#f5c95c; --crit:#ff6b6b;
   --grass:#3d5731; --grass-2:#36502b; --soil:#3a2a1e; --soil-2:#4a3627; --path:#5c574c; --path-2:#4b463d;
   --mulch:#6e4a2a; --mulch-2:#5a3b20; --water:#35607f; --water-2:#447596; --compost:#2a2820; --struct:#4d5258; --struct-2:#40444a;
@@ -896,7 +896,7 @@ nav.tabs button[aria-current="page"] svg{opacity:1}
 </head><body><a class="skip" href="#main">Skip to main content</a>
 <div class="app">
   <header class="top" id="top">
-    <div class="brand"><svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true"><rect width="64" height="64" rx="13" fill="#B4562B"/><path d="M32 46V32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="46" width="28" height="7" rx="2" fill="#F2B640"/><path d="M27.3 46.5V52.5M36.7 46.5V52.5" stroke="#B4562B" stroke-width="2.2"/><path d="M32 37C23 37 17.5 31.5 17.5 23.5C26 23.5 32 28.5 32 37Z" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M32 31C32 22.5 37.5 16.5 46.5 16.5C46.5 25 40.5 31 32 31Z" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg><span>mbgarden.online</span> <small>square-foot planner</small></div>
+    <div class="brand"><svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true"><rect width="64" height="64" rx="13" fill="#2F7D32"/><path d="M32 44V30" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="44" width="28" height="7" rx="2" fill="#F2B640"/><path d="M27.3 44.5V50.5M36.7 44.5V50.5" stroke="#2F7D32" stroke-width="2.2"/><path d="M32 35C23 35 17.5 29.5 17.5 21.5C26 21.5 32 26.5 32 35Z" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M32 29C32 20.5 37.5 14.5 46.5 14.5C46.5 23 40.5 29 32 29Z" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg><span>mbgarden.online</span> <small>square-foot planner</small></div>
     <button class="icon-btn menu-btn" id="menu-btn" aria-expanded="false" aria-controls="top-actions" aria-label="Open menu"><span aria-hidden="true">☰</span><i class="bk-badge" hidden></i></button>
     <nav class="tabs" aria-label="Sections">
       <button data-view="plan" id="tab-plan"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 12h17M12 3.5v17"/></svg><span>Beds</span></button>
