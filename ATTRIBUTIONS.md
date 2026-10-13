@@ -1,6 +1,6 @@
 # Attributions — mbgarden.online
 
-Last updated: September 27, 2026
+Last updated: October 13, 2026
 
 ## Gardening data
 The numbers and guidance in the app are facts from the public sources below, restated in the app's own words. No text or tables were copied. Each crop card links its sources, each life-cycle line links the specific source it came from, and all sources are listed on the in-app Credits page and in Help.
@@ -49,9 +49,15 @@ mbgarden.online is not affiliated with or endorsed by any of the organizations a
 The app uses the visitor's own system fonts (for example Segoe UI on Windows or San Francisco on Apple devices). It doesn't embed or download any fonts, and the standalone build's security policy blocks font loading (`font-src 'none'`). The earlier embedded OFL fonts (Bricolage Grotesque, Instrument Sans, IBM Plex Mono) have been removed, so no font license applies.
 
 ## Emoji and icons
-The crop emoji are Unicode characters drawn by the visitor's own operating-system emoji font. No emoji images are bundled. The mbgarden.online logo (four squares on soil) is an original inline SVG.
+The crop emoji are Unicode characters drawn by the visitor's own operating-system emoji font. No emoji images are bundled. The mbgarden.online logo (a leaf over a soil row, on the MB Suite gradient badge) is an original SVG made for this app in October 2026. The app icons, favicon and `og-image.png` are rendered from it. The paper-cutout sprouts on the Today banner, share cards and OG image (template NA-17, "Garden Rows") are original artwork from the MB Suite nature-shape set.
 
 ## Code
-There are no third-party JavaScript or CSS libraries. All code is original to this project.
+There are no third-party JavaScript or CSS libraries. All code is original. The MB Suite scripts (tab titles, Install card, share cards) and CSS layers inside `index.html` come from Matthew Broyer's own MB Suite design kit, shared by his apps.
 
 **Choose a license for your own code.** If you want others to be able to reuse it, add a LICENSE file (for example MIT). With no license file, all rights are reserved by default.
+
+## Added in v7 (October 2026)
+- **Weather data:** [Open-Meteo.com](https://open-meteo.com/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Used only when a visitor turns on weather alerts. The app turns the forecast into alerts; Open-Meteo doesn't endorse the app.
+- **Crop rotation families and 3–4 year guidance:** [Iowa State Extension: Crop rotation in the vegetable garden](https://yardandgarden.extension.iastate.edu/how-to/crop-rotation-vegetable-garden)
+- **Companion pairings:** [UMN Extension: Companion planting in home gardens](https://extension.umn.edu/planting-and-growing-guides/companion-planting-home-gardens)
+- **Repeat sowings:** crops flagged for sequence plantings in [UNH Extension: When to plant your vegetable garden](https://extension.unh.edu/resource/growing-vegetables-when-plant-your-vegetable-garden-fact-sheet); two-week interval from [University of Maryland Extension: Vegetable succession and companion planting](https://extension.umd.edu/resource/vegetable-succession-and-companion-planting)
