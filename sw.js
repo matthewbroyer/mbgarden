@@ -2,7 +2,7 @@
    It never stores garden data (that lives in your browser storage) and never touches
    other sites' requests, such as the optional weather forecast.
    Change VERSION whenever a file in SHELL changes. */
-const VERSION = 'mbgarden-20261014-25c51f31';
+const VERSION = 'mbgarden-20261014-47e59b87';
 const SHELL = ['./', 'index.html', 'manifest.json', 'apple-touch-icon.png', 'favicon.ico', 'favicon.svg', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 
 self.addEventListener('install', e => {

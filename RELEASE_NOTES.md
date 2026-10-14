@@ -3,6 +3,7 @@
 Newest first. One entry per release, in plain words a user would understand.
 
 ## 1.1 · 2026-10-14
+- New logo (a seedling over raised beds), redrawn in the same style as the other mb apps; app icon, tab icon, share image and pages all updated.
 - About card at the bottom of Settings: version, release date, links and copyright in one place.
 - Installing from matthewbroyer.com: the hub's Install button opens the app with a short install prompt.
 - New "page not found" page that matches the app and links back to it.
