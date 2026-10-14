@@ -2,6 +2,14 @@
 
 Newest first. One entry per release, in plain words a user would understand.
 
+## 1.2 · 2026-10-14
+- On computers, the search box, backup status and logo spacing now look exactly like the other mb apps: same size, same "Search…" text and the same "/" shortcut.
+- The top bar now matches the other mb apps. On phones it shows Search, Data and the light/dark switch right in the bar, plus a ≡ button that opens your plan picker, Plans… and zone.
+- A small dot on Data means a backup is due.
+- On computers everything sits in one row: Search, plan, Plans…, zone, backup status, Data and the light/dark switch.
+- On phones the top bar is a steady 56 px tall, so the Select / Undo tools under it are no longer squeezed.
+- Your plans, plantings, harvests and backups are unchanged.
+
 ## 1.1 · 2026-10-14
 - New logo (a seedling over raised beds), redrawn in the same style as the other mb apps; app icon, tab icon, share image and pages all updated.
 - About card at the bottom of Settings: version, release date, links and copyright in one place.

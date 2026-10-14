@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-app-short="Garden" data-app-domain="mbgarden.online"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YUcGqrIXofVN7JnwyTME3DIvbvj3os9x8Q7G8dCJbzM=' 'sha256-Ni0gbQFgTyGD3c5bTAX9FMVDkn2rj+nEMuQETbKJcc4=' 'sha256-D2FbJ8/k89rK5MoF0+oLGUM/aSAqVrfH5d1C7fHHSc8=' 'sha256-P2AGSv1C4zHTE1L33VXEI8dvld28smbuuRO+OyQCfWM=' 'sha256-vnj3gh/1agjX5a0/nOi1vm6Go/eLqVpKK1fXVjhkp1E='; style-src 'unsafe-inline'; font-src 'none'; img-src 'self' data: blob:; connect-src https://api.open-meteo.com https://geocoding-api.open-meteo.com; worker-src 'self'; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><meta name="description" content="Free square-foot garden planner. Map beds, get planting dates for your zone, track crops and varieties, and log harvests. Your data stays in your browser.">
+<!DOCTYPE html><html lang="en" data-app-short="Garden" data-app-domain="mbgarden.online"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YUcGqrIXofVN7JnwyTME3DIvbvj3os9x8Q7G8dCJbzM=' 'sha256-Ni0gbQFgTyGD3c5bTAX9FMVDkn2rj+nEMuQETbKJcc4=' 'sha256-D2FbJ8/k89rK5MoF0+oLGUM/aSAqVrfH5d1C7fHHSc8=' 'sha256-P2AGSv1C4zHTE1L33VXEI8dvld28smbuuRO+OyQCfWM=' 'sha256-/bBxwDfJXNuTYagpNpTz0lVy2jnCz6eWUjO/EZygEQw='; style-src 'self' 'unsafe-inline'; font-src 'none'; img-src 'self' data: blob:; connect-src https://api.open-meteo.com https://geocoding-api.open-meteo.com; worker-src 'self'; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><meta name="description" content="Free square-foot garden planner. Map beds, get planting dates for your zone, track crops and varieties, and log harvests. Your data stays in your browser.">
 <title>Garden | Beds</title>
 <link rel="manifest" href="manifest.json"><meta name="theme-color" content="#2F7D32"><meta name="application-name" content="Garden"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Garden"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>(function(){var t=null;try{t=localStorage.getItem('mbgarden:theme');}catch(e){}document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();</script>
@@ -332,9 +332,7 @@ td input[type=text]{width:100%;min-width:120px}
 
 /* ---------- header actions, theme, search, help, back-to-top ---------- */
 .top-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.menu-btn{display:none;font-size:18px}
 .tabs .sh{display:none}
-.theme-txt{display:none}
 @media (max-width:1500px){.top .brand small{display:none}}
 .search-btn{color:var(--muted)}
 .search-btn kbd{font:500 10.5px var(--f-mono);border:1px solid var(--line);border-radius:4px;padding:0 5px;color:var(--muted);background:var(--surface-2)}
@@ -628,17 +626,11 @@ nav.tabs button:hover:not([aria-current="page"]){background:color-mix(in srgb,va
   .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30}
   .brand{flex:1;min-width:0;overflow:hidden}
   .brand small{display:none}
-  .menu-btn{flex:none}
-  .menu-btn{display:inline-grid}
   .tabs{order:3;flex-basis:100%}
-  .top-actions{order:4;display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
-  .top.open .top-actions{display:flex}
   .top-actions .planpick select{flex:1;max-width:none}
   .top-actions .btn,.top-actions .chip{justify-content:center;padding-block:9px}
-  .search-btn kbd{display:none}
   .tabs button{flex:1;padding:6px 4px;font-size:13px}
   .tabs .lg{display:none} .tabs .sh{display:inline}
-  .theme-txt{display:inline}
 }
 
 /* =====================================================================
@@ -665,7 +657,6 @@ nav.tabs button:focus-visible{outline-offset:-2px}
 nav.tabs button[aria-current="page"]:hover{color:var(--accent);background:var(--surface-2)}
 .top-actions{gap:6px;padding-block:8px}
 .top-actions .btn,.top-actions .chip,.top-actions select{min-height:var(--ctl-sm)}
-.search-btn kbd{border-radius:3px;font-family:var(--f-mono)}
 
 /* --- buttons --- */
 .btn{border-radius:var(--r-sm);min-height:var(--ctl);padding:0 14px;font-weight:550;font-size:13.5px;border-color:var(--line-strong);background:var(--surface);color:var(--ink)}
@@ -787,7 +778,7 @@ tbody tr:hover td{background:var(--hover-band)}
 }
 @media (max-width:920px){
   .top{padding:0 12px;row-gap:0;min-height:0}
-  .brand,.menu-btn{margin-block:8px}
+  .top .brand{margin-block:8px}
   nav.tabs{border-top:1px solid var(--line);margin-inline:-12px;padding-inline:4px}
   nav.tabs button{min-height:44px;padding:0 4px}
   .top-actions{padding-bottom:12px}
@@ -805,25 +796,14 @@ nav.tabs button[aria-current="page"] svg{opacity:1}
 @media (min-width:921px) and (max-width:1599px){nav.tabs button svg{display:none}}
 @media (min-width:921px){.top{gap:12px}}
 /* light/dark switch — same component as the other apps */
-.themesw{display:inline-flex;align-items:center;gap:8px;border:0;background:none;padding:0;min-height:var(--ctl-sm);color:var(--ink-2);font-weight:550;border-radius:var(--r-sm)}
-.themesw .tk{position:relative;display:block;flex:none;width:52px;height:26px;border-radius:var(--r-sm);background:var(--surface-3);border:1px solid var(--line-strong);transition:border-color var(--ease)}
-.themesw .tk::before,.themesw .tk::after{position:absolute;top:50%;transform:translateY(-50%);font-size:11px;line-height:1;color:var(--muted)}
-.themesw .tk::before{content:"☀";left:6px}
-.themesw .tk::after{content:"☾";right:7px}
-.themesw .th{position:absolute;z-index:1;left:2px;top:2px;width:22px;height:20px;border-radius:3px;background:var(--accent);transition:transform var(--ease)}
-.themesw[aria-checked="true"] .th{transform:translateX(24px)}
-.themesw:hover .tk{border-color:color-mix(in srgb,var(--ink) 35%,var(--line-strong))}
-.themesw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* light/dark switch: standard markup and styles come from mb-suite-topbar.css */
 /* "Backed up …" notifier */
-.data-grp{display:inline-flex;align-items:center;gap:6px}
 .bk-chip{display:inline-flex;align-items:center;gap:6px;min-height:var(--ctl-sm);padding:0 10px;border:1px solid transparent;border-radius:var(--r-sm);background:none;color:var(--muted);font-size:12.5px;font-weight:500;white-space:nowrap}
 .bk-chip .bk-ic{flex:none;width:8px;height:8px;border-radius:2px;background:var(--good)}
 .bk-chip:hover{background:var(--surface-2);color:var(--ink);border-color:var(--line)}
 .bk-chip.warn{color:var(--warn-ink);background:color-mix(in srgb,var(--warn) 14%,var(--surface));border-color:color-mix(in srgb,var(--warn) 55%,transparent);font-weight:600}
 .bk-chip.warn .bk-ic{background:var(--warn)}
 .bk-chip.warn:hover{background:color-mix(in srgb,var(--warn) 22%,var(--surface))}
-.menu-btn{position:relative}
-.bk-badge{display:none;position:absolute;top:3px;right:3px;width:9px;height:9px;border-radius:2px;background:var(--warn);box-shadow:0 0 0 2px var(--surface)}
 /* Data dialog */
 .bk-now{display:flex;flex-direction:column;gap:10px;padding:14px;border:1px solid var(--accent-line);border-left:3px solid var(--accent);border-radius:var(--r);background:var(--accent-soft)}
 .bk-now>.btn{align-self:flex-start}
@@ -877,10 +857,6 @@ nav.tabs button[aria-current="page"] svg{opacity:1}
   .more-tools>summary{max-width:100%}
   .toasts{bottom:calc(70px + env(safe-area-inset-bottom,0px))}
   .totop{bottom:calc(66px + env(safe-area-inset-bottom,0px))}
-  .menu-btn .bk-badge{display:block}
-  .top-actions .data-grp{display:flex}
-  .top-actions .data-grp>*{flex:1;justify-content:center}
-  .themesw{justify-content:center;min-height:44px}
 }
 @media print{nav.tabs,.bk-chip,.themesw{display:none}}
 /* document views: wide timelines and tables scroll inside their panel instead of widening the page */
@@ -1379,19 +1355,28 @@ dialog.mb-share::backdrop{background:var(--scrim)}
 .brand b{font-family:var(--font)}
 .page-bar{padding-top:3px;flex-wrap:nowrap}
 .page-bar .page-title{flex:none;min-width:0}
-.page-bar .top-actions{flex-wrap:nowrap;padding-block:0;margin-left:auto}
-.page-bar .menu-btn{margin-left:auto}
+/* standard top bar (mb-suite-topbar.css, linked last). Garden extras = plan picker, Plans…, zone:
+   inline in the bar on wide screens, behind More ≡ (a panel under the bar) at ≤920px. */
+.page-bar .top-actions{display:flex;align-items:center;gap:var(--tb-gap,6px);flex-wrap:nowrap;padding:0;margin:0}
+.page-bar .top-actions .planpick{gap:var(--tb-gap,6px)}
+.page-bar .top-actions select,.page-bar .top-actions .btn,.page-bar .top-actions .chip{box-sizing:border-box;height:var(--tb-h);min-height:var(--tb-h);border-radius:var(--r-sm);font-size:13.5px}
+.page-bar .top-actions .btn,.page-bar .top-actions .chip{padding:0 11px;white-space:nowrap}
+.page-bar .bk-chip{height:var(--tb-h);min-height:var(--tb-h);box-sizing:border-box}
+.page-bar .actions .tb.menu-btn{display:none}
+.page-bar .search-btn kbd{font-family:var(--font)}
 /* tighter page bar on laptop widths so every action fits on one line */
-@media (max-width:1366px){.page-bar .theme-txt,.page-bar .search-btn kbd{display:none}.page-bar .planpick select{max-width:170px}}
+@media (max-width:1366px){.page-bar .planpick select{max-width:170px}}
 @media (min-width:921px) and (max-width:1180px){.page-bar .page-title{display:none}.page-bar .bk-chip #bk-txt{max-width:96px;overflow:hidden;text-overflow:ellipsis}}
-/* ≤920px (rail and phones): actions move into the menu panel under the bar, as before */
+/* ≤920px (rail and phones): the garden extras move into a panel under the bar, opened by More ≡ */
 @media (max-width:920px){
   .page-bar{position:sticky;top:0}
+  .page-bar .actions .tb.menu-btn{display:inline-flex}
   .page-bar .top-actions{position:absolute;left:0;right:0;top:100%;margin:0;padding:12px max(12px,env(safe-area-inset-right)) 14px max(12px,env(safe-area-inset-left));
     background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow-pop);z-index:35}
   .page-bar .top-actions{display:none;flex-direction:column;align-items:stretch;gap:8px}
   .page-bar.open .top-actions{display:flex}
-  .page-bar .theme-txt{display:inline}
+  .page-bar .top-actions .planpick select{flex:1;max-width:none}
+  .page-bar .top-actions select,.page-bar .top-actions .btn,.page-bar .top-actions .chip{height:44px;min-height:44px;justify-content:center}
 }
 /* phones: bottom bar (4 sections + More) and the More sheet */
 .more-sheet{display:none}
@@ -1444,9 +1429,10 @@ dialog.mb-share::backdrop{background:var(--scrim)}
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Garden: Plan your beds. Know when to plant.">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="mb-suite-topbar.css">
 </head><body><a class="skip" href="#main">Skip to main content</a>
 <aside class="mb-side" aria-label="App">
-  <a class="brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="mbga-g1-1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4f9051"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="mbga-c1-1"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#mbga-c1-1)"><rect width="64" height="64" fill="url(#mbga-g1-1)"/><rect x="12" y="34" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><rect x="12" y="44" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><path d="M32 34V23" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M32 25c-.8-6.5-5.5-10-12-10 0 6.5 5 10 12 10z" fill="#fff"/><path d="M32 23c.8-6.5 5.5-10 12-10 0 6.5-5 10-12 10z" fill="#F2B640"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.1</span></span></a>
+  <a class="brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="mbga-g1-1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4f9051"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="mbga-c1-1"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#mbga-c1-1)"><rect width="64" height="64" fill="url(#mbga-g1-1)"/><rect x="12" y="34" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><rect x="12" y="44" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><path d="M32 34V23" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M32 25c-.8-6.5-5.5-10-12-10 0 6.5 5 10 12 10z" fill="#fff"/><path d="M32 23c.8-6.5 5.5-10 12-10 0 6.5-5 10-12 10z" fill="#F2B640"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.2</span></span></a>
   <nav class="side-nav mb-nav" aria-label="Sections">
     <button type="button" data-view="today" id="tab-today"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><span>Today</span></button>
     <button type="button" data-view="plan" id="tab-plan"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 12h17M12 3.5v17"/></svg><span>Beds</span></button>
@@ -1461,21 +1447,21 @@ dialog.mb-share::backdrop{background:var(--scrim)}
 </aside>
 <div class="app mb-main">
   <header class="page-bar" id="top">
-    <a class="brand phone-brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="mbga-g1-2" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4f9051"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="mbga-c1-2"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#mbga-c1-2)"><rect width="64" height="64" fill="url(#mbga-g1-2)"/><rect x="12" y="34" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><rect x="12" y="44" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><path d="M32 34V23" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M32 25c-.8-6.5-5.5-10-12-10 0 6.5 5 10 12 10z" fill="#fff"/><path d="M32 23c.8-6.5 5.5-10 12-10 0 6.5-5 10-12 10z" fill="#F2B640"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.1</span></span></a>
+    <a class="brand phone-brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="mbga-g1-2" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4f9051"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="mbga-c1-2"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#mbga-c1-2)"><rect width="64" height="64" fill="url(#mbga-g1-2)"/><rect x="12" y="34" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><rect x="12" y="44" width="40" height="7" rx="3" fill="#fff" fill-opacity=".55"/><path d="M32 34V23" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M32 25c-.8-6.5-5.5-10-12-10 0 6.5 5 10 12 10z" fill="#fff"/><path d="M32 23c.8-6.5 5.5-10 12-10 0 6.5-5 10-12 10z" fill="#F2B640"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.2</span></span></a>
     <div class="page-title" id="page-title">Beds</div>
-    <button class="icon-btn menu-btn" id="menu-btn" aria-expanded="false" aria-controls="top-actions" aria-label="Open menu"><span aria-hidden="true">☰</span><i class="bk-badge" hidden></i></button>
-    <div class="actions top-actions" id="top-actions">
-      <button class="btn sm search-btn" id="search-btn" title="Search crops, plantings, harvests and help (/ or Ctrl+K)"><span aria-hidden="true">⌕</span> Search <kbd>/</kbd></button>
-      <div class="planpick">
-        <select id="plan-select" aria-label="Garden plan"></select>
-        <button class="btn sm" id="plan-menu-btn" title="New, duplicate, rename or delete plans">Plans…</button>
+    <div class="actions">
+      <button type="button" class="tb tb-search search-btn" id="search-btn" aria-label="Search" title="Search crops, plantings, harvests and help (/ or Ctrl+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="tb-lbl">Search…</span><kbd>/</kbd></button>
+      <div class="top-actions" id="top-actions" role="group" aria-label="Garden plan and zone">
+        <div class="planpick">
+          <select id="plan-select" aria-label="Garden plan"></select>
+          <button type="button" class="btn sm" id="plan-menu-btn" title="New, duplicate, rename or delete plans">Plans…</button>
+        </div>
+        <button type="button" class="chip zone" id="zone-btn" title="Change your growing zone and frost dates"></button>
       </div>
-      <button class="chip zone" id="zone-btn" title="Change your growing zone and frost dates"></button>
-      <div class="data-grp">
-        <button class="bk-chip" id="bk-chip" title="Save backup now (Ctrl+S)"><span class="bk-ic" aria-hidden="true"></span><span id="bk-txt">Never backed up</span></button>
-        <button class="btn sm" id="backup-btn" title="Save a backup, import or export (Ctrl+S saves a backup)">Data</button>
-      </div>
-      <button class="themesw" id="theme-btn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="tk" aria-hidden="true"><span class="th"></span></span><span class="theme-txt">Dark mode</span></button>
+      <button type="button" class="bk-chip tb-chip" id="bk-chip" title="Save backup now (Ctrl+S)"><span class="bk-ic" aria-hidden="true"></span><span id="bk-txt">Never backed up</span></button>
+      <button type="button" class="tb" id="backup-btn" aria-haspopup="dialog" aria-label="Data" title="Save a backup, import or export (Ctrl+S saves a backup)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><span class="tb-lbl">Data</span><svg class="tb-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg><i class="bk-badge tb-dot" aria-hidden="true" hidden></i></button>
+      <button type="button" class="themesw" id="theme-btn" role="switch" aria-checked="false" aria-label="Dark mode" title="Dark mode"><span class="tk"><svg class="i-sun" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="10" r="3.2"/><path d="M10 2.5v1.8M10 15.7v1.8M2.5 10h1.8M15.7 10h1.8M4.7 4.7l1.3 1.3M14 14l1.3 1.3M4.7 15.3 6 14M14 6l1.3-1.3"/></svg><svg class="i-moon" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" fill="currentColor"><path d="M16.5 12.2A6.6 6.6 0 0 1 7.8 3.5a6.6 6.6 0 1 0 8.7 8.7Z"/></svg><i class="th"></i></span></button>
+      <button type="button" class="tb menu-btn" id="menu-btn" aria-expanded="false" aria-controls="top-actions" aria-label="More: plan and zone" title="Plan and zone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
   </header>
 
@@ -3740,9 +3726,9 @@ function setTheme(t){themePref=t==='dark'?'dark':'light';try{localStorage.setIte
 $('#theme-btn').onclick=()=>setTheme(themePref==='dark'?'light':'dark');
 
 /* ---------- mobile menu ---------- */
-function setMenu(open){const t=$('#top'),b=$('#menu-btn');t.classList.toggle('open',open);b.setAttribute('aria-expanded',open);b.setAttribute('aria-label',open?'Close menu':'Open menu');b.firstElementChild.textContent=open?'✕':'☰';}
+function setMenu(open){const t=$('#top'),b=$('#menu-btn');t.classList.toggle('open',open);b.setAttribute('aria-expanded',open);b.setAttribute('aria-label',open?'Close plan and zone':'More: plan and zone');}
 $('#menu-btn').onclick=()=>setMenu(!$('#top').classList.contains('open'));
-$$('#top-actions button:not(#theme-btn)').forEach(b=>b.addEventListener('click',()=>setMenu(false)));
+$$('#top .actions button:not(#theme-btn):not(#menu-btn)').forEach(b=>b.addEventListener('click',()=>setMenu(false)));
 document.addEventListener('pointerdown',e=>{if($('#top').classList.contains('open')&&!e.target.closest('#top'))setMenu(false);});
 
 /* ---------- back to top ---------- */
@@ -3794,7 +3780,7 @@ function renderHelp(){
     <div class="filters"><button class="btn" id="faq-setup">Run setup again</button><button class="btn" id="faq-ck">Show checklist</button><button class="btn" id="faq-open">Expand all</button></div></div>
     <div class="faq">`;
   let g='';FAQ.forEach(f=>{if(f.g!==g){g=f.g;h+=`<h2 class="faq-group">${esc(g)}</h2>`;}h+=`<details id="faq-${f.id}"${ui.faqOpen===f.id?' open':''}><summary>${esc(f.q)}</summary><div class="ans">${faqAnswer(f)}</div></details>`;});
-  h+='</div><div class="mb-help-end">'+'<div data-mb-install data-app-name="Garden" data-note="Opens in its own window with its own icon. Works offline after the first visit, except weather." hidden></div>'+'<div class="mb-about" role="group" aria-label="About this app"><svg class="uic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg><div><b>mbgarden.online™</b><p>Version 1.1 · Oct 14, 2026</p><p class="mb-about-links"><button type="button" data-go="notes">What\'s new</button><a href="#privacy" data-go="privacy">Privacy</a><a href="#terms" data-go="terms">Terms</a><a href="https://matthewbroyer.com/">More free apps at matthewbroyer.com</a></p><p class="mb-about-copy">© 2026 Matthew Broyer. All rights reserved.</p></div></div></div>';
+  h+='</div><div class="mb-help-end">'+'<div data-mb-install data-app-name="Garden" data-note="Opens in its own window with its own icon. Works offline after the first visit, except weather." hidden></div>'+'<div class="mb-about" role="group" aria-label="About this app"><svg class="uic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg><div><b>mbgarden.online™</b><p>Version 1.2 · Oct 14, 2026</p><p class="mb-about-links"><button type="button" data-go="notes">What\'s new</button><a href="#privacy" data-go="privacy">Privacy</a><a href="#terms" data-go="terms">Terms</a><a href="https://matthewbroyer.com/">More free apps at matthewbroyer.com</a></p><p class="mb-about-copy">© 2026 Matthew Broyer. All rights reserved.</p></div></div></div>';
   $('#view-help').innerHTML=h+legalFooter()+'</div>';bindLegalLinks($('#view-help'));
   $('#faq-open').onclick=()=>$$('.faq details').forEach(d=>d.open=true);
   $('#faq-setup').onclick=()=>onboardingModal();
@@ -3862,6 +3848,11 @@ function renderLegal(which){
 
 /* ---------- release notes ---------- */
 const RELEASES=[
+  {date:'October 14, 2026',title:'Version 1.2: standard top bar',items:[
+    ['Improved','The top bar now matches the other mb apps. On phones it shows <b>Search</b>, <b>Data</b> and the light/dark switch right in the bar, plus a <b>≡</b> button for your plan and zone. A small dot on Data means a backup is due.'],
+    ['Improved','On computers everything sits in one row: Search, plan, Plans…, zone, backup status, Data and the light/dark switch.'],
+    ['Fixed','On phones the top bar is a steady 56 px, so the tools under it are no longer squeezed.'],
+  ]},
   {date:'October 14, 2026',title:'Version 1.1: About card and install link',items:[
     ['New','<b>About card</b> at the bottom of Help: version, release date, links and copyright in one place. The Install card moved down next to it.'],
     ['New','<b>Installing from matthewbroyer.com:</b> the hub’s Install button opens the app with a short install prompt.'],
