@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-app-short="Garden" data-app-domain="mbgarden.online"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YUcGqrIXofVN7JnwyTME3DIvbvj3os9x8Q7G8dCJbzM=' 'sha256-Ni0gbQFgTyGD3c5bTAX9FMVDkn2rj+nEMuQETbKJcc4=' 'sha256-uNXoP3izn6/DnQCtLzNfzYwCp9RLYvAI70XqLBxB+SY=' 'sha256-P2AGSv1C4zHTE1L33VXEI8dvld28smbuuRO+OyQCfWM=' 'sha256-Lud+LiZYmjS3HHge/MxZggtvhYosv+9rMJtieri6qxc='; style-src 'unsafe-inline'; font-src 'none'; img-src 'self' data: blob:; connect-src https://api.open-meteo.com https://geocoding-api.open-meteo.com; worker-src 'self'; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><meta name="description" content="Free square-foot garden planner. Map beds, get planting dates for your zone, track crops and varieties, and log harvests. Your data stays in your browser.">
+<!DOCTYPE html><html lang="en" data-app-short="Garden" data-app-domain="mbgarden.online"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-YUcGqrIXofVN7JnwyTME3DIvbvj3os9x8Q7G8dCJbzM=' 'sha256-Ni0gbQFgTyGD3c5bTAX9FMVDkn2rj+nEMuQETbKJcc4=' 'sha256-D2FbJ8/k89rK5MoF0+oLGUM/aSAqVrfH5d1C7fHHSc8=' 'sha256-P2AGSv1C4zHTE1L33VXEI8dvld28smbuuRO+OyQCfWM=' 'sha256-vnj3gh/1agjX5a0/nOi1vm6Go/eLqVpKK1fXVjhkp1E='; style-src 'unsafe-inline'; font-src 'none'; img-src 'self' data: blob:; connect-src https://api.open-meteo.com https://geocoding-api.open-meteo.com; worker-src 'self'; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><meta name="description" content="Free square-foot garden planner. Map beds, get planting dates for your zone, track crops and varieties, and log harvests. Your data stays in your browser.">
 <title>Garden | Beds</title>
 <link rel="manifest" href="manifest.json"><meta name="theme-color" content="#2F7D32"><meta name="application-name" content="Garden"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Garden"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>(function(){var t=null;try{t=localStorage.getItem('mbgarden:theme');}catch(e){}document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();</script>
@@ -1331,6 +1331,19 @@ a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .mb-install.is-done{border-left-color:var(--good)}
 .mb-install.is-done>.uic{color:var(--good-ink)}
 @media (max-width:520px){.mb-install{flex-wrap:wrap}.mb-install .btn{width:100%}}
+/* ---- about card (bottom of Settings/More, below the Install card · SUITE-STANDARDS §1 · kit v3.1) ---- */
+.mb-about{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;margin-top:12px;border:1px solid var(--border);border-left:3px solid var(--accent);
+  border-radius:var(--r);background:var(--surface)}
+.mb-about>.uic{flex:none;width:22px;height:22px;color:var(--accent)}
+.mb-about>div{flex:1;min-width:0}
+.mb-about b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+.mb-about p{margin:2px 0 0;font-size:12.5px;color:var(--ink-2)}
+.mb-about .mb-about-links{display:flex;flex-wrap:wrap;gap:0 14px;margin-top:4px}
+.mb-about .mb-about-links a,.mb-about .mb-about-links button{display:inline-flex;align-items:center;min-height:28px;padding:0;border:0;background:none;
+  font:inherit;color:var(--accent);text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.mb-about .mb-about-links a:hover,.mb-about .mb-about-links button:hover{color:var(--accent-hover)}
+.mb-about .mb-about-copy{margin-top:4px;color:var(--muted,var(--ink-2))}
+.mb-help-end{margin-top:24px}
 
 /* ---- share button (put it where the milestone is shown) ---- */
 .mb-share-btn .uic{width:16px;height:16px}
@@ -1433,7 +1446,7 @@ dialog.mb-share::backdrop{background:var(--scrim)}
 <meta name="twitter:card" content="summary_large_image">
 </head><body><a class="skip" href="#main">Skip to main content</a>
 <aside class="mb-side" aria-label="App">
-  <a class="brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="gb1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4c8f4f"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="cb1"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#cb1)"><rect width="64" height="64" fill="url(#gb1)"/><path d="M14 50c6-4.5 12-4.5 18 0s12 4.5 18 0" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M19 41C19 25 30 15 47 15C47 32 36 41 19 41Z" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M19 41L36 26" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.0</span></span></a>
+  <a class="brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="gb1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4c8f4f"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="cb1"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#cb1)"><rect width="64" height="64" fill="url(#gb1)"/><path d="M14 50c6-4.5 12-4.5 18 0s12 4.5 18 0" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M19 41C19 25 30 15 47 15C47 32 36 41 19 41Z" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M19 41L36 26" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.1</span></span></a>
   <nav class="side-nav mb-nav" aria-label="Sections">
     <button type="button" data-view="today" id="tab-today"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><span>Today</span></button>
     <button type="button" data-view="plan" id="tab-plan"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 12h17M12 3.5v17"/></svg><span>Beds</span></button>
@@ -1448,7 +1461,7 @@ dialog.mb-share::backdrop{background:var(--scrim)}
 </aside>
 <div class="app mb-main">
   <header class="page-bar" id="top">
-    <a class="brand phone-brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="gb2" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4c8f4f"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="cb2"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#cb2)"><rect width="64" height="64" fill="url(#gb2)"/><path d="M14 50c6-4.5 12-4.5 18 0s12 4.5 18 0" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M19 41C19 25 30 15 47 15C47 32 36 41 19 41Z" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M19 41L36 26" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.0</span></span></a>
+    <a class="brand phone-brand" href="./" data-home aria-label="mbgarden.online: go to Beds"><span class="logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="gb2" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#4c8f4f"/><stop offset=".55" stop-color="#2F7D32"/><stop offset="1" stop-color="#266428"/></linearGradient><clipPath id="cb2"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#cb2)"><rect width="64" height="64" fill="url(#gb2)"/><path d="M14 50c6-4.5 12-4.5 18 0s12 4.5 18 0" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M19 41C19 25 30 15 47 15C47 32 36 41 19 41Z" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M19 41L36 26" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g></svg></span><span class="bt"><b>mbgarden<i class="tld">.online</i></b><span>Official Web App · v1.1</span></span></a>
     <div class="page-title" id="page-title">Beds</div>
     <button class="icon-btn menu-btn" id="menu-btn" aria-expanded="false" aria-controls="top-actions" aria-label="Open menu"><span aria-hidden="true">☰</span><i class="bk-badge" hidden></i></button>
     <div class="actions top-actions" id="top-actions">
@@ -1600,6 +1613,66 @@ dialog.mb-share::backdrop{background:var(--scrim)}
   window.addEventListener('appinstalled', function () { deferred = null; render(); });
   document.addEventListener('click', function (e) { var b = e.target.closest && e.target.closest('[data-mb-install-btn]'); if (b) install(); });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render); else render();
+  /* ---- v3.1 · install link ------------------------------------------------------------
+     Opening the app as <domain>/?install (the hub's Install buttons do this) shows a small
+     install sheet once, then removes ?install from the address bar. It uses the same rules as
+     the card: a real Install button only when the browser offers install, iPhone steps on iOS,
+     plain guidance otherwise, nothing when already running as the installed app. */
+  var sheet = null, sheetUsed = false, sheetDone = false;
+  var SHEET_CSS = '.mb-isheet{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:2147483000;width:min(460px,calc(100% - 24px));border-radius:var(--r,6px);box-shadow:0 12px 32px -8px rgba(20,24,31,.35),0 2px 6px rgba(20,24,31,.12);animation:mbis .16s ease-out}' +
+    '.mb-isheet .mb-install{align-items:flex-start;padding:14px 44px 14px 14px;position:relative;flex-wrap:nowrap}' +
+    '.mb-isheet-a{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.mb-isheet-a .btn{width:auto!important}' +
+    '.mb-isheet-x{position:absolute;top:6px;right:6px;width:32px;height:32px;display:grid;place-items:center;border:0;border-radius:4px;background:none;color:var(--ink-2,#48505c);font-size:22px;line-height:1;cursor:pointer}' +
+    '.mb-isheet-x:hover{background:var(--hover-band,rgba(20,24,31,.06))}' +
+    '@media (max-width:767px){.mb-isheet{bottom:calc(84px + env(safe-area-inset-bottom,0px))}.mb-isheet-x{width:44px;height:44px;top:2px;right:2px}}' +
+    '@keyframes mbis{from{opacity:0;transform:translate(-50%,8px)}}@media (prefers-reduced-motion:reduce){.mb-isheet{animation:none}}';
+  function appName() {
+    var box = document.querySelector('[data-mb-install][data-app-name]'), m = document.querySelector('meta[name="application-name"]');
+    return (box && box.getAttribute('data-app-name')) || document.documentElement.getAttribute('data-app-short') || (m && m.content) || (document.title.split('|')[0] || '').trim() || 'this app';
+  }
+  function wantSheet() {
+    try {
+      var u = new URL(location.href), hit = u.searchParams.has('install') || u.hash === '#install';
+      if (!hit) return false;
+      u.searchParams.delete('install'); if (u.hash === '#install') u.hash = '';
+      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+      return true;
+    } catch (e) { return false; }
+  }
+  function sheetBody(name) {
+    var n = esc(name), close = '<button type="button" class="btn" data-mb-isheet-close>Not now</button>';
+    if (sheetDone) return '<div><b id="mb-isheet-t">' + n + ' is installed</b><p>Open it from your home screen or app list.</p><div class="mb-isheet-a"><button type="button" class="btn primary" data-mb-isheet-close>Done</button></div></div>';
+    if (standalone()) return '';
+    if (deferred) return '<div><b id="mb-isheet-t">Install ' + n + '</b><p>Opens in its own window with its own icon. Remove it any time like any other app.</p><div class="mb-isheet-a"><button type="button" class="btn primary" data-mb-install-btn>Install</button>' + close + '</div></div>';
+    if (sheetUsed) return '';                       // the prompt was answered; nothing more to say
+    if (ios()) return '<div><b id="mb-isheet-t">Add ' + n + ' to your Home Screen</b><p>Tap <b>Share</b>, then <b>Add to Home Screen</b>. It opens full screen with its own icon.</p><div class="mb-isheet-a"><button type="button" class="btn primary" data-mb-isheet-close>Got it</button></div></div>';
+    return '<div><b id="mb-isheet-t">Install ' + n + '</b><p>This browser hasn’t offered to install the app. In Chrome or Edge, use the install icon in the address bar or the browser menu. Some browsers, like Firefox on a computer, can’t install web apps. Already installed? Open it from your apps.</p><div class="mb-isheet-a"><button type="button" class="btn primary" data-mb-isheet-close>OK</button></div></div>';
+  }
+  function closeSheet() { if (sheet) { sheet.remove(); sheet = null; } }
+  function showSheet() {
+    var body = sheetBody(appName());
+    if (!body) { closeSheet(); return; }
+    var fresh = !sheet;
+    if (fresh) {
+      if (!document.getElementById('mb-isheet-css')) { var st = document.createElement('style'); st.id = 'mb-isheet-css'; st.textContent = SHEET_CSS; document.head.appendChild(st); }
+      sheet = document.createElement('div'); sheet.className = 'mb-isheet';
+      sheet.setAttribute('role', 'dialog'); sheet.setAttribute('aria-labelledby', 'mb-isheet-t');
+      document.body.appendChild(sheet);
+    }
+    sheet.innerHTML = '<div class="mb-install">' + ICON + body + '<button type="button" class="mb-isheet-x" data-mb-isheet-close aria-label="Close">×</button></div>';
+    var first = sheet.querySelector('.btn.primary'); if (first && (fresh || !sheet.contains(document.activeElement))) first.focus();
+  }
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('[data-mb-isheet-close]')) closeSheet();
+    else if (sheet && e.target.closest && e.target.closest('.mb-isheet [data-mb-install-btn]')) { sheetUsed = true; setTimeout(closeSheet, 0); }   // the browser's own dialog takes over
+  });
+  document.addEventListener('keydown', function (e) { if (sheet && e.key === 'Escape') { e.stopImmediatePropagation(); closeSheet(); } }, true);   // Esc closes only the sheet, not the app's own dialog under it
+  window.addEventListener('appinstalled', function () { if (sheet) { sheetDone = true; showSheet(); } });
+  window.addEventListener('beforeinstallprompt', function () { if (sheet) setTimeout(showSheet, 0); });
+  if (wantSheet()) {
+    var go = function () { setTimeout(showSheet, deferred ? 0 : 1200); };   // give the browser a moment to offer install
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
+  }
   window.MBInstall = { render: render, install: install, registerSW: registerSW, canInstall: function () { return !!deferred; }, isInstalled: standalone };
 })();
 </script>
@@ -3705,7 +3778,7 @@ const FAQ=[
  {g:'Today & records',id:'yield',q:'How are yield and value worked out?',a:'<p>Weights (lb, oz, kg) are converted to pounds. Square feet and plant counts come from that season’s plans, so per-square-foot numbers are only as accurate as your map. Value is each pick times the price you set under <b>Records → Money</b>; the app doesn’t look up prices. Comparisons across seasons are your own observations, not controlled tests.</p>'},
  {g:'Data',id:'weather',q:'How do weather alerts work, and what do they send?',a:'<p>They’re off until you turn them on from Today. You pick a US town or ZIP, or let your browser share your location. The app rounds the location to about 1 km and asks <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>, a free weather service, for a 7-day forecast at most about every 3 hours while Today is open. Open-Meteo also sees your IP address. Nothing about your garden is sent.</p><p>Alerts: frost (low of 32°F or below in the next 4 days, listing frost-tender crops in the ground), heat (90°F or more), 1 in. or more of rain in 2 days, and dry stretches. Turn it off from the weather panel, which also deletes the saved location.</p>'},
  {g:'Data',id:'photos',q:'Where are my photos kept?',a:'<p>On this device only, in your browser’s storage. Photos are shrunk to 1200 pixels and re-saved, which also strips hidden location data from phone pictures. They aren’t in the copy-paste backup text. Include them with <b>Include photos in backups</b> in the Data dialog, then use <b>Export All (JSON)</b> or <b>Export All (ZIP)</b>.</p>'},
- {g:'Data',id:'install',q:'Can I install it or use it offline?',a:'<p>Yes. After one visit the app works without a connection, except weather and place search. To install it: in Chrome or Edge, use <b>Install</b> at the top of this page (it appears once the browser offers it) or the install icon in the address bar. On iPhone or iPad, open it in Safari, tap <b>Share</b>, then <b>Add to Home Screen</b>. On Android, use the browser menu’s <b>Install app</b> or <b>Add to Home screen</b>.</p><p>An installed app keeps its data separate from the browser tab on some phones, especially iPhone. Move data between them with a backup file.</p>'},
+ {g:'Data',id:'install',q:'Can I install it or use it offline?',a:'<p>Yes. After one visit the app works without a connection, except weather and place search. To install it: in Chrome or Edge, use <b>Install</b> at the bottom of this page (it appears once the browser offers it) or the install icon in the address bar. On iPhone or iPad, open it in Safari, tap <b>Share</b>, then <b>Add to Home Screen</b>. On Android, use the browser menu’s <b>Install app</b> or <b>Add to Home screen</b>.</p><p>An installed app keeps its data separate from the browser tab on some phones, especially iPhone. Move data between them with a backup file.</p>'},
  {g:'Data',id:'data',q:'Where is my garden saved?',a:'<p>In this browser on this device. It saves automatically, but clearing site data or switching browsers or devices starts fresh. Open <b>Data</b> and press <b>Save backup now</b> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) to save everything to a file. The first time, you choose the folder and file name. After that one click updates the same file. Restore it with <b>Import Backup (JSON)</b> on any device.</p><p>The <b>Backed up…</b> label in the header shows when you last saved a backup. It’s highlighted in amber after 7 days.</p>'},
  {g:'Data',id:'saveloc',q:'Where does the backup file go?',a:'<p>In Chrome and Edge on a computer, wherever you choose. The app remembers that file (browsers only share its name, not the folder path) and <b>Change location…</b> picks a new one. Firefox, Safari and phones can’t choose a location, so backups download to your Downloads folder with the date in the name.</p>'},
  {g:'Data',id:'csv',q:'Can I use my data in a spreadsheet?',a:'<p>Yes. <b>Data → Export CSV</b> gives you the harvest log, plantings or crop list. To bring data in, use <b>Import CSV</b>. It detects the type from the column names, shows which rows are ready, and explains any it skips before anything changes.</p>'},
@@ -3719,9 +3792,10 @@ function faqAnswer(f){return f.a.replace('${SFG}',srcLink('sfg')).replace('${PHI
 function renderHelp(){
   let h=`<div class="doc-in" style="max-width:860px"><div class="doc-head"><div><p class="eyebrow">Help</p><h1>Answers for planning your garden</h1><p>Can’t find it? Press <kbd>/</kbd> to search everything.</p></div>
     <div class="filters"><button class="btn" id="faq-setup">Run setup again</button><button class="btn" id="faq-ck">Show checklist</button><button class="btn" id="faq-open">Expand all</button></div></div>
-    <div data-mb-install data-app-name="Garden" data-note="Opens in its own window with its own icon. Works offline after the first visit, except weather." hidden></div><div class="faq">`;
+    <div class="faq">`;
   let g='';FAQ.forEach(f=>{if(f.g!==g){g=f.g;h+=`<h2 class="faq-group">${esc(g)}</h2>`;}h+=`<details id="faq-${f.id}"${ui.faqOpen===f.id?' open':''}><summary>${esc(f.q)}</summary><div class="ans">${faqAnswer(f)}</div></details>`;});
-  $('#view-help').innerHTML=h+'</div>'+legalFooter()+'</div>';bindLegalLinks($('#view-help'));
+  h+='</div><div class="mb-help-end">'+'<div data-mb-install data-app-name="Garden" data-note="Opens in its own window with its own icon. Works offline after the first visit, except weather." hidden></div>'+'<div class="mb-about" role="group" aria-label="About this app"><svg class="uic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg><div><b>mbgarden.online™</b><p>Version 1.1 · Oct 14, 2026</p><p class="mb-about-links"><button type="button" data-go="notes">What\'s new</button><a href="#privacy" data-go="privacy">Privacy</a><a href="#terms" data-go="terms">Terms</a><a href="https://matthewbroyer.com/">More free apps at matthewbroyer.com</a></p><p class="mb-about-copy">© 2026 Matthew Broyer. All rights reserved.</p></div></div></div>';
+  $('#view-help').innerHTML=h+legalFooter()+'</div>';bindLegalLinks($('#view-help'));
   $('#faq-open').onclick=()=>$$('.faq details').forEach(d=>d.open=true);
   $('#faq-setup').onclick=()=>onboardingModal();
   if(window.MBInstall)MBInstall.render();
@@ -3788,6 +3862,11 @@ function renderLegal(which){
 
 /* ---------- release notes ---------- */
 const RELEASES=[
+  {date:'October 14, 2026',title:'Version 1.1: About card and install link',items:[
+    ['New','<b>About card</b> at the bottom of Help: version, release date, links and copyright in one place. The Install card moved down next to it.'],
+    ['New','<b>Installing from matthewbroyer.com:</b> the hub’s Install button opens the app with a short install prompt.'],
+    ['New','A “page not found” page that matches the app and links back to it.'],
+  ]},
   {date:'October 13, 2026',title:'New look, sidebar and share cards',items:[
     ['New','<b>Share cards:</b> turn your harvest season (Harvests tab) or your garden plan (Beds tab) into a square image to post or send. The image is made on your device, and the plan name stays off it unless you switch it on.'],
     ['Improved','<b>Sidebar navigation:</b> sections now sit in a sidebar on the left. Tablets get a compact icon rail, and phones keep the bottom bar, with Records, Crop guide and Help under <b>More</b>.'],

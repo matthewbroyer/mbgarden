@@ -2,6 +2,13 @@
 
 Newest first. One entry per release, in plain words a user would understand.
 
+## 1.1 · 2026-10-14
+- About card at the bottom of Settings: version, release date, links and copyright in one place.
+- Installing from matthewbroyer.com: the hub's Install button opens the app with a short install prompt.
+- New "page not found" page that matches the app and links back to it.
+- Garden has no Settings page, so the About card sits at the bottom of Help, and the Install card moved from the top of Help down next to it. The Help answer about installing now says so.
+- Version numbers restart at 1.x with the suite's "Official Web App" label; earlier releases were numbered v1–v8.
+
 ## 2026-10-13 · v8: new look, sidebar and share cards
 
 - **New logo and app icon:** a leaf over a soil row. The installed app is now called **Garden** (it was "mbgarden").
